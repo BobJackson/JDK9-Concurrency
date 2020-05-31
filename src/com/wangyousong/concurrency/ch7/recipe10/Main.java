@@ -1,0 +1,31 @@
+package com.wangyousong.concurrency.ch7.recipe10;
+
+import com.wangyousong.concurrency.ch7.recipe10.Account;
+import com.wangyousong.concurrency.ch7.recipe10.Decrementer;
+import com.wangyousong.concurrency.ch7.recipe10.Incrementer;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Account account = new Account();
+
+		Thread threadIncrementer = new Thread(new Incrementer(account));
+		Thread threadDecrementer = new Thread(new Decrementer(account));
+
+		threadIncrementer.start();
+		threadDecrementer.start();
+
+		try {
+			threadIncrementer.join();
+			threadDecrementer.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.printf("Safe amount: %f\n", account.amount);
+		System.out.printf("Unsafe amount: %f\n", account.unsafeAmount);
+
+	}
+
+}
