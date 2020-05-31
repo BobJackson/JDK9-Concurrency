@@ -1,10 +1,7 @@
 package com.wangyousong.concurrency.ch5.recipe04;
 
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
-
-import com.wangyousong.concurrency.ch5.recipe04.Task;
 
 /**
  * Main class of the example. Creates a ForkJoinPool, an array of 100

@@ -1,7 +1,5 @@
 package com.wangyousong.concurrency.ch11.recipe07;
 
-import com.wangyousong.concurrency.ch11.recipe07.DBConnectionOK;
-
 public class Task implements Runnable {
 
     @Override

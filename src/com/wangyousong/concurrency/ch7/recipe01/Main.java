@@ -2,9 +2,6 @@ package com.wangyousong.concurrency.ch7.recipe01;
 
 import java.util.concurrent.ConcurrentLinkedDeque;
 
-import com.wangyousong.concurrency.ch7.recipe01.AddTask;
-import com.wangyousong.concurrency.ch7.recipe01.PollTask;
-
 /**
  * Main class of the example. First, execute 100 AddTask objects to add 1000000
  * elements to the list and the execute 100 PollTask objects to delete all those

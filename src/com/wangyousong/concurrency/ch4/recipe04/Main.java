@@ -7,9 +7,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import com.wangyousong.concurrency.ch4.recipe04.Result;
-import com.wangyousong.concurrency.ch4.recipe04.Task;
-
 /**
  * Main class of the example. Launch three tasks using the invokeAll() method
  * and then prints their results to the console

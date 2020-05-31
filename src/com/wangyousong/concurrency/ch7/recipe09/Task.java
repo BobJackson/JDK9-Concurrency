@@ -2,8 +2,6 @@ package com.wangyousong.concurrency.ch7.recipe09;
 
 import java.util.Date;
 
-import com.wangyousong.concurrency.ch7.recipe09.Flag;
-
 public class Task implements Runnable {
 
     private Flag flag;

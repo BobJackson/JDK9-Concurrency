@@ -5,8 +5,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch4.recipe07.Task;
-
 /**
  * Main class of the example. Execute a task trough an executor, waits
  * 2 seconds and then cancel the task.

@@ -5,8 +5,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch11.recipe05.Task;
-
 public class Main {
 
     /**

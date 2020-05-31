@@ -8,10 +8,6 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 
-import com.wangyousong.concurrency.ch11.recipe12.PersonMapTask;
-import com.wangyousong.concurrency.ch11.recipe12.Person;
-import com.wangyousong.concurrency.ch11.recipe12.PersonGenerator;
-
 public class Main {
 
     public static void main(String[] args) {

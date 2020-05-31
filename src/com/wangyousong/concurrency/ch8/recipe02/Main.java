@@ -4,8 +4,6 @@ import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch8.recipe02.MyPriorityTask;
-
 /**
  * Main method of the class. It creates an Executor with a PriorityQueue as working queue and then
  * sends various tasks with different priorities to check that they are executed in the correct order

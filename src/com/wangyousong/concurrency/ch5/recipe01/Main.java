@@ -4,10 +4,6 @@ import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch5.recipe01.Task;
-import com.wangyousong.concurrency.ch5.recipe01.Product;
-import com.wangyousong.concurrency.ch5.recipe01.ProductListGenerator;
-
 /**
  * Main class of the example. It creates a list of products, a ForkJoinPool and
  * a task to execute the actualization of products.

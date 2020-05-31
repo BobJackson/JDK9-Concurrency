@@ -3,8 +3,6 @@ package com.wangyousong.concurrency.ch6.recipe09;
 import java.util.concurrent.Flow;
 import java.util.concurrent.Flow.Subscription;
 
-import com.wangyousong.concurrency.ch6.recipe09.Item;
-
 public class Consumer2 implements Flow.Subscriber<Item> {
 
     private Subscription subscription;

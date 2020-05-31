@@ -1,12 +1,8 @@
 package com.wangyousong.concurrency.ch8.recipe12;
 
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.Flow.Subscriber;
-
-import com.wangyousong.concurrency.ch8.recipe12.News;
-import com.wangyousong.concurrency.ch8.recipe12.Consumer;
-import com.wangyousong.concurrency.ch8.recipe12.MyPublisher;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 

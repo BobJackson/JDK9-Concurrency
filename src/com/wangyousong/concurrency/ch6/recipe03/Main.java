@@ -1,19 +1,12 @@
 package com.wangyousong.concurrency.ch6.recipe03;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Collector.Characteristics;
 import java.util.stream.Collectors;
-
-import com.wangyousong.concurrency.ch6.recipe03.Counter;
-import com.wangyousong.concurrency.ch6.recipe03.Person;
-import com.wangyousong.concurrency.ch6.recipe03.PersonGenerator;
 
 public class Main {
 

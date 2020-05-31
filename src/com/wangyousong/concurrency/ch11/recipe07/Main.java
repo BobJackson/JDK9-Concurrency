@@ -1,7 +1,5 @@
 package com.wangyousong.concurrency.ch11.recipe07;
 
-import com.wangyousong.concurrency.ch11.recipe07.Task;
-
 public class Main {
 
     /**

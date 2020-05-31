@@ -3,9 +3,6 @@ package com.wangyousong.concurrency.ch9.recipe01;
 import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch9.recipe01.MyLock;
-import com.wangyousong.concurrency.ch9.recipe01.Task;
-
 /**
  * Main class of the example. Create five threads to execute the task and write info
  * about the Lock shared by all the threads

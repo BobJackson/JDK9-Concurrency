@@ -2,8 +2,6 @@ package com.wangyousong.concurrency.ch7.recipe05;
 
 import java.util.concurrent.ConcurrentSkipListMap;
 
-import com.wangyousong.concurrency.ch7.recipe05.Contact;
-
 /**
  * This class implements a task that store contacts in a navigable map
  */

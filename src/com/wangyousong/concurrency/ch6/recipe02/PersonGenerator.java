@@ -1,10 +1,6 @@
 package com.wangyousong.concurrency.ch6.recipe02;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class PersonGenerator {
 

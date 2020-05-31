@@ -3,8 +3,6 @@ package com.wangyousong.concurrency.ch9.recipe02;
 import java.util.concurrent.Phaser;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch9.recipe02.Task;
-
 /**
  * Ma�n class of the example. Creates a Phaser with three participants and
  * Three task objects. Write information about the evolution of the Phaser

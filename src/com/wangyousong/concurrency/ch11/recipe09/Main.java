@@ -2,8 +2,6 @@ package com.wangyousong.concurrency.ch11.recipe09;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-import com.wangyousong.concurrency.ch11.recipe09.Task;
-
 public class Main {
 
     /**

@@ -6,8 +6,6 @@ import java.util.concurrent.Flow.Publisher;
 import java.util.concurrent.Flow.Subscriber;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import com.wangyousong.concurrency.ch8.recipe12.News;
-
 public class MyPublisher implements Publisher<News> {
 
     private ConcurrentLinkedDeque<ConsumerData> consumers;

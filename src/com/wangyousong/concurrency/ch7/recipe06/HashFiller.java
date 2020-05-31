@@ -5,8 +5,6 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
-import com.wangyousong.concurrency.ch7.recipe06.Operation;
-
 public class HashFiller implements Runnable {
 
     private ConcurrentHashMap<String, ConcurrentLinkedDeque<Operation>> userHash;

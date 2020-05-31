@@ -6,9 +6,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import com.wangyousong.concurrency.ch4.recipe03.ValidatorTask;
-import com.wangyousong.concurrency.ch4.recipe03.UserValidator;
-
 /**
  * This is the main class of the example. Creates two user validation systems and execute
  * them in an Executor using the invokeAny() method. If the user is validated by one of the

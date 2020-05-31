@@ -3,11 +3,6 @@ package com.wangyousong.concurrency.ch6.recipe09;
 import java.util.concurrent.SubmissionPublisher;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch6.recipe09.Consumer1;
-import com.wangyousong.concurrency.ch6.recipe09.Consumer2;
-import com.wangyousong.concurrency.ch6.recipe09.Consumer3;
-import com.wangyousong.concurrency.ch6.recipe09.Item;
-
 public class Main {
 
     public static void main(String[] args) {

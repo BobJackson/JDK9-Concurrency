@@ -4,9 +4,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch5.recipe02.DocumentTask;
-import com.wangyousong.concurrency.ch5.recipe02.DocumentMock;
-
 /**
  * Main class of the example.
  */

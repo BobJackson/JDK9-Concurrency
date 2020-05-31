@@ -3,8 +3,6 @@ package com.wangyousong.concurrency.ch9.recipe04;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch9.recipe04.Task;
-
 /**
  * Main class of the example. It creates all the elements for the
  * execution and writes information about the Fork/Join pool that

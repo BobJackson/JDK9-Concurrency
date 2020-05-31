@@ -3,9 +3,6 @@ package com.wangyousong.concurrency.ch8.recipe05;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch8.recipe05.MyScheduledThreadPoolExecutor;
-import com.wangyousong.concurrency.ch8.recipe05.Task;
-
 /**
  * Main class of the example. Creates a MyScheduledThreadPoolExecutor and
  * executes a delayed task and a periodic task in it.

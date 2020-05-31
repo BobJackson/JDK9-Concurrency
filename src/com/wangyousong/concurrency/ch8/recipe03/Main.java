@@ -1,8 +1,5 @@
 package com.wangyousong.concurrency.ch8.recipe03;
 
-import com.wangyousong.concurrency.ch8.recipe03.MyTask;
-import com.wangyousong.concurrency.ch8.recipe03.MyThreadFactory;
-
 /**
  * Main class of the example. Creates a factory, a MyThread object to execute a Task object
  * and executes the Thread

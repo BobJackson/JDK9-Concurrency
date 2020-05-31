@@ -1,7 +1,5 @@
 package com.wangyousong.concurrency.ch9.recipe11;
 
-import com.wangyousong.concurrency.ch9.recipe11.Task;
-
 public class Main {
 
     public static void main(String[] args) {

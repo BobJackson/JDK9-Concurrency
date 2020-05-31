@@ -2,8 +2,6 @@ package com.wangyousong.concurrency.ch5.recipe05;
 
 import java.util.concurrent.ConcurrentLinkedDeque;
 
-import com.wangyousong.concurrency.ch5.recipe05.SearchNumberTask;
-
 /**
  * Class that stores all the tasks that have been sent to
  * a ForkJoinPool. Provides a method for the cancellation of

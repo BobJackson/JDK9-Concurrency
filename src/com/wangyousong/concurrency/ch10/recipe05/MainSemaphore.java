@@ -3,8 +3,6 @@ package com.wangyousong.concurrency.ch10.recipe05;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch10.recipe05.TaskSemaphore;
-
 /**
  * Main class of the example. Create ten threads to execute ten
  * task objects and write information about the semaphore

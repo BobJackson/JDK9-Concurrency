@@ -3,8 +3,6 @@ package com.wangyousong.concurrency.ch5.recipe05;
 import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch5.recipe05.TaskManager;
-
 /**
  * This task look for a number in an array of integer numbers.
  * If the part of the array it has to process has more than

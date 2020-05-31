@@ -3,8 +3,6 @@ package com.wangyousong.concurrency.ch7.recipe10;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.VarHandle;
 
-import com.wangyousong.concurrency.ch7.recipe10.Account;
-
 public class Incrementer implements Runnable {
 
 	private Account account;

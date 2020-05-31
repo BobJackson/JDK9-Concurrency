@@ -8,8 +8,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import com.wangyousong.concurrency.ch4.recipe02.FactorialCalculator;
-
 /**
  * Main class of the example. Creates and execute ten FactorialCalculator tasks
  * in an executor controlling when they finish to write the results calculated

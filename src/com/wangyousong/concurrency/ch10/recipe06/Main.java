@@ -1,7 +1,5 @@
 package com.wangyousong.concurrency.ch10.recipe06;
 
-import com.wangyousong.concurrency.ch10.recipe06.TaskLocalRandom;
-
 /**
  * Main class of the example. It creates three task and execute them
  */

@@ -5,9 +5,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch10.recipe01.FileSearch;
-import com.wangyousong.concurrency.ch10.recipe01.Task;
-
 /**
  * Main class of the example. Create three FileSearch objects, encapsulate inside
  * three Task objects and execute them as they were callable objects

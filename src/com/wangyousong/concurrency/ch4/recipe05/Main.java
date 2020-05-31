@@ -5,8 +5,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch4.recipe05.Task;
-
 /**
  * Main class of the example. Send 5 tasks to an scheduled executor
  * Task 0: Delay of 1 second

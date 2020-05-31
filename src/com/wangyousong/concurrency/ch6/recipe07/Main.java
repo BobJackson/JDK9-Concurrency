@@ -3,11 +3,7 @@ package com.wangyousong.concurrency.ch6.recipe07;
 import java.util.Arrays;
 import java.util.List;
 import java.util.TreeSet;
-import java.util.stream.Collector.Characteristics;
 import java.util.stream.Collectors;
-
-import com.wangyousong.concurrency.ch6.recipe07.Person;
-import com.wangyousong.concurrency.ch6.recipe07.PersonGenerator;
 
 public class Main {
 

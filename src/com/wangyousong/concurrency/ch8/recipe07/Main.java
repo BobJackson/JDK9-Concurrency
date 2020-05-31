@@ -2,8 +2,6 @@ package com.wangyousong.concurrency.ch8.recipe07;
 
 import java.util.concurrent.ForkJoinPool;
 
-import com.wangyousong.concurrency.ch8.recipe07.Task;
-
 /**
  * Main class of the example. It creates a ForkJoinPool and a
  * Task and executes the task in the pool

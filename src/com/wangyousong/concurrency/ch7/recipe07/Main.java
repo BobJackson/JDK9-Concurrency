@@ -1,10 +1,5 @@
 package com.wangyousong.concurrency.ch7.recipe07;
 
-import com.wangyousong.concurrency.ch7.recipe07.Account;
-import com.wangyousong.concurrency.ch7.recipe07.Bank;
-import com.wangyousong.concurrency.ch7.recipe07.Company;
-
-
 /**
  * Main class of the example. It creates an account, a company and a bank
  * to work with the account. The final balance should be equal to the initial, but....

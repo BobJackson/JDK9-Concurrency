@@ -2,8 +2,6 @@ package com.wangyousong.concurrency.ch10.recipe04;
 
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch10.recipe04.Task;
-
 /**
  * Main class of the example. Creates five threads and writes information about them
  */

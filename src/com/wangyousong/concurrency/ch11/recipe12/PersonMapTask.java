@@ -5,8 +5,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.RecursiveAction;
 
-import com.wangyousong.concurrency.ch11.recipe12.Person;
-
 public class PersonMapTask extends RecursiveAction {
 
     /**

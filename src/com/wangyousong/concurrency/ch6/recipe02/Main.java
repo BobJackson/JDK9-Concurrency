@@ -4,12 +4,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.DoubleStream;
 
-import com.wangyousong.concurrency.ch6.recipe02.DoubleGenerator;
-import com.wangyousong.concurrency.ch6.recipe02.Person;
-import com.wangyousong.concurrency.ch6.recipe02.PersonGenerator;
-import com.wangyousong.concurrency.ch6.recipe02.Point;
-import com.wangyousong.concurrency.ch6.recipe02.PointGenerator;
-
 public class Main {
 
     public static void main(String args[]) {

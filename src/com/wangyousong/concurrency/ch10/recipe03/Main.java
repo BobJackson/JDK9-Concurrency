@@ -2,9 +2,6 @@ package com.wangyousong.concurrency.ch10.recipe03;
 
 import java.util.concurrent.LinkedTransferQueue;
 
-import com.wangyousong.concurrency.ch10.recipe03.Consumer;
-import com.wangyousong.concurrency.ch10.recipe03.Producer;
-
 /**
  * Main class of the example. It executes 100 producers and 100 consumers
  */

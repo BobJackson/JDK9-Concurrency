@@ -6,9 +6,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch11.recipe08.Task;
-import com.wangyousong.concurrency.ch11.recipe08.TaskFJ;
-
 public class Main {
 
     /**

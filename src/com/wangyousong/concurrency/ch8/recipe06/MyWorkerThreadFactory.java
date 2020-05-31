@@ -1,8 +1,8 @@
 package com.wangyousong.concurrency.ch8.recipe06;
 
 import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.ForkJoinWorkerThread;
 import java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory;
+import java.util.concurrent.ForkJoinWorkerThread;
 
 /**
  * Factory to be used by the Fork/Join framework to create the worker threads. Implements

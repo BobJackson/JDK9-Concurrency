@@ -3,9 +3,6 @@ package com.wangyousong.concurrency.ch7.recipe06;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
-import com.wangyousong.concurrency.ch7.recipe06.HashFiller;
-import com.wangyousong.concurrency.ch7.recipe06.Operation;
-
 public class Main {
 
     public static void main(String[] args) {

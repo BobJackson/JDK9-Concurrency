@@ -3,8 +3,6 @@ package com.wangyousong.concurrency.ch9.recipe06;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import com.wangyousong.concurrency.ch9.recipe06.MyLoggerFactory;
-
 /**
  * This class is the Task you're going to use to test the
  * Logger system you have implemented. It simply write a log

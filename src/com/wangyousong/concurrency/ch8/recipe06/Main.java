@@ -3,9 +3,6 @@ package com.wangyousong.concurrency.ch8.recipe06;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch8.recipe06.MyRecursiveTask;
-import com.wangyousong.concurrency.ch8.recipe06.MyWorkerThreadFactory;
-
 /**
  * Main class of the example. It creates an array of 100000 elements, initializes all
  * the elements to the 1 value, creates a new ForkJoinPool with the new

@@ -3,10 +3,6 @@ package com.wangyousong.concurrency.ch10.recipe02;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch10.recipe02.AlwaysThrowsExceptionWorkerThreadFactory;
-import com.wangyousong.concurrency.ch10.recipe02.Handler;
-import com.wangyousong.concurrency.ch10.recipe02.OneSecondLongTask;
-
 /**
  * Main class of the example
  */

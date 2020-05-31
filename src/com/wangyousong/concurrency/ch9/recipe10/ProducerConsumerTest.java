@@ -1,8 +1,8 @@
 package com.wangyousong.concurrency.ch9.recipe10;
 
-import java.util.concurrent.LinkedTransferQueue;
-
 import edu.umd.cs.mtc.MultithreadedTestCase;
+
+import java.util.concurrent.LinkedTransferQueue;
 
 /**
  * This class implements a test of the LinkedTransferQueue. It has

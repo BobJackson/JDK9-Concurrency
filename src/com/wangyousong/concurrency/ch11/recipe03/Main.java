@@ -2,9 +2,6 @@ package com.wangyousong.concurrency.ch11.recipe03;
 
 import java.util.Date;
 
-import com.wangyousong.concurrency.ch11.recipe03.TaskAtomic;
-import com.wangyousong.concurrency.ch11.recipe03.TaskLock;
-
 public class Main {
 
     /**

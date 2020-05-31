@@ -1,7 +1,5 @@
 package com.wangyousong.concurrency.ch9.recipe10;
 
-import com.wangyousong.concurrency.ch9.recipe10.ProducerConsumerTest;
-
 import edu.umd.cs.mtc.TestFramework;
 
 /**

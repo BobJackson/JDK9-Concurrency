@@ -1,9 +1,5 @@
 package com.wangyousong.concurrency.ch8.recipe10;
 
-import com.wangyousong.concurrency.ch8.recipe10.ParkingCounter;
-import com.wangyousong.concurrency.ch8.recipe10.Sensor1;
-import com.wangyousong.concurrency.ch8.recipe10.Sensor2;
-
 /**
  * Main class of the example
  */

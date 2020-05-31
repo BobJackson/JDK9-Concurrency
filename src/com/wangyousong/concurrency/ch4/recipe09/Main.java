@@ -1,13 +1,6 @@
 package com.wangyousong.concurrency.ch4.recipe09;
 
-import java.util.concurrent.CompletionService;
-import java.util.concurrent.ExecutorCompletionService;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
-import com.wangyousong.concurrency.ch4.recipe09.ReportProcessor;
-import com.wangyousong.concurrency.ch4.recipe09.ReportRequest;
+import java.util.concurrent.*;
 
 /**
  * Main class of the example creates all the necessary objects and throws the tasks

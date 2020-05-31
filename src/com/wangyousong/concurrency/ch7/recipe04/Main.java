@@ -4,9 +4,6 @@ import java.util.Date;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch7.recipe04.Event;
-import com.wangyousong.concurrency.ch7.recipe04.Task;
-
 /**
  * Main method of the example. Execute five tasks and then take the events of
  * the delayed queue when they are activated

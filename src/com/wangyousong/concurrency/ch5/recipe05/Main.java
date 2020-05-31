@@ -3,10 +3,6 @@ package com.wangyousong.concurrency.ch5.recipe05;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch5.recipe05.SearchNumberTask;
-import com.wangyousong.concurrency.ch5.recipe05.ArrayGenerator;
-import com.wangyousong.concurrency.ch5.recipe05.TaskManager;
-
 /**
  * Main class of the program.
  */

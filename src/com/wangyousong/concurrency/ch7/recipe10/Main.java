@@ -1,9 +1,5 @@
 package com.wangyousong.concurrency.ch7.recipe10;
 
-import com.wangyousong.concurrency.ch7.recipe10.Account;
-import com.wangyousong.concurrency.ch7.recipe10.Decrementer;
-import com.wangyousong.concurrency.ch7.recipe10.Incrementer;
-
 public class Main {
 
 	public static void main(String[] args) {

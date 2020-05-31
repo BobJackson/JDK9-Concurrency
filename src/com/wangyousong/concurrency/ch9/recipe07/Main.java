@@ -2,8 +2,6 @@ package com.wangyousong.concurrency.ch9.recipe07;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-import com.wangyousong.concurrency.ch9.recipe07.Task;
-
 /**
  * Main class of the example. It launch ten Task objects
  */

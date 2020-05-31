@@ -2,9 +2,6 @@ package com.wangyousong.concurrency.ch7.recipe03;
 
 import java.util.concurrent.PriorityBlockingQueue;
 
-import com.wangyousong.concurrency.ch7.recipe03.Event;
-import com.wangyousong.concurrency.ch7.recipe03.Task;
-
 /**
  * Main class of the example. Executes five threads that store their events in a
  * common priority queue and writes them in the console to verify the correct

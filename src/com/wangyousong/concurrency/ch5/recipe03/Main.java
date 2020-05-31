@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch5.recipe03.FolderProcessor;
-
 /**
  * Main class of the example
  */

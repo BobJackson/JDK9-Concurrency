@@ -1,8 +1,5 @@
 package com.wangyousong.concurrency.ch4.recipe01;
 
-import com.wangyousong.concurrency.ch4.recipe01.Server;
-import com.wangyousong.concurrency.ch4.recipe01.Task;
-
 /**
  * Main class of the example. Creates a server and 100 request of the Task class
  * that sends to the server

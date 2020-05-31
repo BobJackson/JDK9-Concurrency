@@ -1,7 +1,5 @@
 package com.wangyousong.concurrency.ch8.recipe12;
 
-import com.wangyousong.concurrency.ch8.recipe12.News;
-
 public class PublisherTask implements Runnable {
 
     private ConsumerData consumerData;

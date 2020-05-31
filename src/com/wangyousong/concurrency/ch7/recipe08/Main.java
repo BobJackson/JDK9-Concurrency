@@ -2,9 +2,6 @@ package com.wangyousong.concurrency.ch7.recipe08;
 
 import java.util.concurrent.atomic.AtomicIntegerArray;
 
-import com.wangyousong.concurrency.ch7.recipe08.Decrementer;
-import com.wangyousong.concurrency.ch7.recipe08.Incrementer;
-
 /**
  * Main class of the example. Execute 100 incrementers and 100 decrementers
  * and checks that the results are the expected

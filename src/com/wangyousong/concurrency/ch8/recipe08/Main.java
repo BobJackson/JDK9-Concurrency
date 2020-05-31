@@ -2,9 +2,6 @@ package com.wangyousong.concurrency.ch8.recipe08;
 
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch8.recipe08.MyLock;
-import com.wangyousong.concurrency.ch8.recipe08.Task;
-
 /**
  * Main class of the example
  */

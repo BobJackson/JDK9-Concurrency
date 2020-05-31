@@ -2,10 +2,6 @@ package com.wangyousong.concurrency.ch6.recipe04;
 
 import java.util.List;
 
-import com.wangyousong.concurrency.ch6.recipe04.DoubleGenerator;
-import com.wangyousong.concurrency.ch6.recipe04.Person;
-import com.wangyousong.concurrency.ch6.recipe04.PersonGenerator;
-
 public class Main {
 
     public static void main(String[] args) {

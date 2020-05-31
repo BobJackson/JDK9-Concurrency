@@ -7,9 +7,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch8.recipe01.MyExecutor;
-import com.wangyousong.concurrency.ch8.recipe01.SleepTwoSecondsTask;
-
 /**
  * Main clas of the example. It creates a custom executor and executes 10 tasks in it
  */

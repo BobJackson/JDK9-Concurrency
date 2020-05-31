@@ -4,9 +4,6 @@ import java.util.Date;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import com.wangyousong.concurrency.ch11.recipe04.Task1;
-import com.wangyousong.concurrency.ch11.recipe04.Task2;
-
 public class Main {
 
     /**

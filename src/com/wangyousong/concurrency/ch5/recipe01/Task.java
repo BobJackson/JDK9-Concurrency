@@ -3,8 +3,6 @@ package com.wangyousong.concurrency.ch5.recipe01;
 import java.util.List;
 import java.util.concurrent.RecursiveAction;
 
-import com.wangyousong.concurrency.ch5.recipe01.Product;
-
 /**
  * This class implements the tasks that are going to update the
  * price information. If the assigned interval of values is less that 10, it

@@ -2,9 +2,6 @@ package com.wangyousong.concurrency.ch8.recipe11;
 
 import java.util.stream.StreamSupport;
 
-import com.wangyousong.concurrency.ch8.recipe11.Item;
-import com.wangyousong.concurrency.ch8.recipe11.MySpliterator;
-
 public class Main {
 
     public static void main(String[] args) {

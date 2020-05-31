@@ -4,9 +4,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch8.recipe04.MyTask;
-import com.wangyousong.concurrency.ch8.recipe04.MyThreadFactory;
-
 /**
  * Main class of the example. Creates a Factory, an Executor using
  * that factory and submits a task to the executor

@@ -4,8 +4,6 @@ import java.util.Date;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch7.recipe02.Client;
-
 /**
  * Main class of the example. First, execute 100 AddTask objects to add 1000000
  * elements to the list and the execute 100 PollTask objects to delete all those

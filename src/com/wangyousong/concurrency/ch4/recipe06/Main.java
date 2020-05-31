@@ -6,8 +6,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch4.recipe06.Task;
-
 /**
  * Main class of the example. Send a task to the executor that will execute every
  * two seconds. Then, control the remaining time for the next execution of the task

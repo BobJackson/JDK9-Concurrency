@@ -4,9 +4,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentNavigableMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 
-import com.wangyousong.concurrency.ch7.recipe05.Task;
-import com.wangyousong.concurrency.ch7.recipe05.Contact;
-
 /**
  * Main class of the example. It executes twenty-five tasks that store contacts
  * in the navigable map and then shows part of the content of that navigable map

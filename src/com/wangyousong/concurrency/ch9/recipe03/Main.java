@@ -5,8 +5,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch9.recipe03.Task;
-
 /**
  * Main class of the example. Create an Executor and submits ten Task
  * objects for its execution. It writes information about the executor

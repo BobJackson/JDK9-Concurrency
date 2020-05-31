@@ -2,11 +2,6 @@ package com.wangyousong.concurrency.ch8.recipe09;
 
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch8.recipe09.Consumer;
-import com.wangyousong.concurrency.ch8.recipe09.Event;
-import com.wangyousong.concurrency.ch8.recipe09.MyPriorityTransferQueue;
-import com.wangyousong.concurrency.ch8.recipe09.Producer;
-
 /**
  * Main class of the example.
  */

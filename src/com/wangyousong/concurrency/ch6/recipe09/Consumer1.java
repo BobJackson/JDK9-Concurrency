@@ -2,8 +2,6 @@ package com.wangyousong.concurrency.ch6.recipe09;
 
 import java.util.concurrent.Flow;
 
-import com.wangyousong.concurrency.ch6.recipe09.Item;
-
 public class Consumer1 implements Flow.Subscriber<Item> {
 
     @Override

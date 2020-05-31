@@ -5,9 +5,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch4.recipe08.ExecutableTask;
-import com.wangyousong.concurrency.ch4.recipe08.ResultTask;
-
 /**
  * Main class of the example. Creates five tasks that wait a random period of time.
  * Waits 5 seconds and cancel all the tasks. Then, write the results of that tasks

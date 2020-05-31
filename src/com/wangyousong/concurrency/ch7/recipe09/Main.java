@@ -3,11 +3,6 @@ package com.wangyousong.concurrency.ch7.recipe09;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import com.wangyousong.concurrency.ch7.recipe09.Flag;
-import com.wangyousong.concurrency.ch7.recipe09.VolatileFlag;
-import com.wangyousong.concurrency.ch7.recipe09.Task;
-import com.wangyousong.concurrency.ch7.recipe09.VolatileTask;
-
 
 public class Main {
 

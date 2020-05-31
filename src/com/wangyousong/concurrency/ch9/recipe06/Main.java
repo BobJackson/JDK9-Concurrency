@@ -3,9 +3,6 @@ package com.wangyousong.concurrency.ch9.recipe06;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.wangyousong.concurrency.ch9.recipe06.MyLoggerFactory;
-import com.wangyousong.concurrency.ch9.recipe06.Task;
-
 /**
  * Main class of the example. It launch five Task objects and write
  * some log messages indicating the evolution of the execution of the program

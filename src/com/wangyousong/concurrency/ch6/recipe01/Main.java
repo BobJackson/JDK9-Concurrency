@@ -14,10 +14,6 @@ import java.util.function.Supplier;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
-import com.wangyousong.concurrency.ch6.recipe01.MySupplier;
-import com.wangyousong.concurrency.ch6.recipe01.Person;
-import com.wangyousong.concurrency.ch6.recipe01.PersonGenerator;
-
 public class Main {
 
     public static void main(String[] args) {
