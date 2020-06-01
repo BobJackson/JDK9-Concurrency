@@ -21,12 +21,12 @@ public class FolderProcessor extends CountedCompleter<List<String>> {
     /**
      * Path of the folder this task is going to process
      */
-    private String path;
+    private final String path;
 
     /**
      * Extension of the file the task is looking for
      */
-    private String extension;
+    private final String extension;
 
     /**
      * Child tasks
@@ -75,21 +75,21 @@ public class FolderProcessor extends CountedCompleter<List<String>> {
         tasks = new ArrayList<>();
 
         File file = new File(path);
-        File content[] = file.listFiles();
+        File[] content = file.listFiles();
         if (content != null) {
-            for (int i = 0; i < content.length; i++) {
-                if (content[i].isDirectory()) {
+            for (File value : content) {
+                if (value.isDirectory()) {
                     // If is a directory, process it. Execute a new Task
-                    FolderProcessor task = new FolderProcessor(this, content[i].getAbsolutePath(), extension);
+                    FolderProcessor task = new FolderProcessor(this, value.getAbsolutePath(), extension);
                     task.fork();
                     addToPendingCount(1);
                     tasks.add(task);
                 } else {
                     // If is a file, process it. Compare the extension of the file and the extension
                     // it's looking for
-                    if (checkFile(content[i].getName())) {
-                        resultList.add(content[i].getAbsolutePath());
-                        System.out.printf("Result found: %s\n", content[i].getAbsolutePath());
+                    if (checkFile(value.getName())) {
+                        resultList.add(value.getAbsolutePath());
+                        System.out.printf("Result found: %s\n", value.getAbsolutePath());
                     }
                 }
             }
@@ -121,10 +121,7 @@ public class FolderProcessor extends CountedCompleter<List<String>> {
      * @return true if the name has the extension or false otherwise
      */
     private boolean checkFile(String name) {
-        if (name.endsWith(extension)) {
-            return true;
-        }
-        return false;
+        return name.endsWith(extension);
     }
 
     /**

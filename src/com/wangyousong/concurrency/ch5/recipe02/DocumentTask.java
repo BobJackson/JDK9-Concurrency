@@ -23,17 +23,18 @@ public class DocumentTask extends RecursiveTask<Integer> {
     /**
      * Document to process
      */
-    private String document[][];
+    private final String[][] document;
 
     /**
      * Range of lines of the document this task has to process
      */
-    private int start, end;
+    private final int start;
+    private final int end;
 
     /**
      * Word we are looking for
      */
-    private String word;
+    private final String word;
 
     /**
      * Constructor of the class
@@ -43,7 +44,7 @@ public class DocumentTask extends RecursiveTask<Integer> {
      * @param end      End position of the block of the document this task has to process
      * @param word     Word we are looking for
      */
-    public DocumentTask(String document[][], int start, int end, String word) {
+    public DocumentTask(String[][] document, int start, int end, String word) {
         this.document = document;
         this.start = start;
         this.end = end;
@@ -86,7 +87,7 @@ public class DocumentTask extends RecursiveTask<Integer> {
      */
     private Integer processLines(String[][] document, int start, int end,
                                  String word) {
-        List<LineTask> tasks = new ArrayList<LineTask>();
+        List<LineTask> tasks = new ArrayList<>();
 
         for (int i = start; i < end; i++) {
             LineTask task = new LineTask(document[i], 0, document[i].length, word);
@@ -95,8 +96,7 @@ public class DocumentTask extends RecursiveTask<Integer> {
         invokeAll(tasks);
 
         int result = 0;
-        for (int i = 0; i < tasks.size(); i++) {
-            LineTask task = tasks.get(i);
+        for (LineTask task : tasks) {
             try {
                 result = result + task.get();
             } catch (InterruptedException | ExecutionException e) {
@@ -114,10 +114,7 @@ public class DocumentTask extends RecursiveTask<Integer> {
      * @return The sum of the two results
      */
     private Integer groupResults(Integer number1, Integer number2) {
-        Integer result;
-
-        result = number1 + number2;
-        return result;
+        return number1 + number2;
     }
 
 

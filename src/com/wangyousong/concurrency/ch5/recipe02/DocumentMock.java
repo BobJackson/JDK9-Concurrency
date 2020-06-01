@@ -12,7 +12,7 @@ public class DocumentMock {
     /**
      * String array with the words of the document
      */
-    private String words[] = {"the", "hello", "goodbye", "packt", "java", "thread", "pool", "random", "class", "main"};
+    private final String[] words = {"the", "hello", "goodbye", "packt", "java", "thread", "pool", "random", "class", "main"};
 
     /**
      * Method that generates the String matrix
@@ -25,12 +25,11 @@ public class DocumentMock {
     public String[][] generateDocument(int numLines, int numWords, String word) {
 
         int counter = 0;
-        String document[][] = new String[numLines][numWords];
+        String[][] document = new String[numLines][numWords];
         Random random = new Random();
         for (int i = 0; i < numLines; i++) {
             for (int j = 0; j < numWords; j++) {
-                int index = random.nextInt(words.length);
-                document[i][j] = words[index];
+                document[i][j] = words[random.nextInt(words.length)];
                 if (document[i][j].equals(word)) {
                     counter++;
                 }

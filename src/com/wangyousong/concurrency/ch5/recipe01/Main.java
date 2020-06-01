@@ -32,12 +32,12 @@ public class Main {
 
         // Write information about the pool
         do {
-            System.out.printf("******************************************\n");
+            System.out.print("******************************************\n");
             System.out.printf("Main: Parallelism: %d\n", pool.getParallelism());
             System.out.printf("Main: Active Threads: %d\n", pool.getActiveThreadCount());
             System.out.printf("Main: Task Count: %d\n", pool.getQueuedTaskCount());
             System.out.printf("Main: Steal Count: %d\n", pool.getStealCount());
-            System.out.printf("******************************************\n");
+            System.out.print("******************************************\n");
             try {
                 TimeUnit.MILLISECONDS.sleep(5);
             } catch (InterruptedException e) {
@@ -50,12 +50,11 @@ public class Main {
 
         // Check if the task has completed normally
         if (task.isCompletedNormally()) {
-            System.out.printf("Main: The process has completed normally.\n");
+            System.out.print("Main: The process has completed normally.\n");
         }
 
         // Expected result: 12. Write products which price is not 12
-        for (int i = 0; i < products.size(); i++) {
-            Product product = products.get(i);
+        for (Product product : products) {
             if (product.getPrice() != 12) {
                 System.out.printf("Product %s: %f\n", product.getName(), product.getPrice());
             }

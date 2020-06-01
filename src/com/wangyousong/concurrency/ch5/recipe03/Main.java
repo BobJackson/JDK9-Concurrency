@@ -28,14 +28,14 @@ public class Main {
 
         // Write statistics of the pool until the three tasks end
         do {
-            System.out.printf("******************************************\n");
+            System.out.print("******************************************\n");
             System.out.printf("Main: Parallelism: %d\n", pool.getParallelism());
             System.out.printf("Main: Active Threads: %d\n", pool.getActiveThreadCount());
             System.out.printf("Main: Task Count: %d\n", pool.getQueuedTaskCount());
             System.out.printf("Main: Steal Count: %d\n", pool.getStealCount());
             System.out.printf("Main: %b - %b - %b\n", system.isDone(), apps.isDone(), documents.isDone());
             System.out.printf("Main: %d - %d - %d\n", system.getPendingCount(), apps.getPendingCount(), documents.getPendingCount());
-            System.out.printf("******************************************\n");
+            System.out.print("******************************************\n");
             try {
                 TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {

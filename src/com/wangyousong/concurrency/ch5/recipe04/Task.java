@@ -20,13 +20,14 @@ public class Task extends RecursiveTask<Integer> {
     /**
      * Array to process
      */
-    private int array[];
+    private final int[] array;
 
     /**
      * Start and end positions of the block of elements this task
      * has to process
      */
-    private int start, end;
+    private final int start;
+    private final int end;
 
     /**
      * Constructor of the class
@@ -35,7 +36,7 @@ public class Task extends RecursiveTask<Integer> {
      * @param start Start position of the block of elements this task has to process
      * @param end   End position of the block of elements this task has to process
      */
-    public Task(int array[], int start, int end) {
+    public Task(int[] array, int start, int end) {
         this.array = array;
         this.start = start;
         this.end = end;

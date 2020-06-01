@@ -17,7 +17,7 @@ public class Main {
 
         // Generate an array of 1000 integers
         ArrayGenerator generator = new ArrayGenerator();
-        int array[] = generator.generateArray(1000);
+        int[] array = generator.generateArray(1000);
 
         // Create a TaskManager object
         TaskManager manager = new TaskManager();
@@ -43,7 +43,7 @@ public class Main {
         }
 
         // Write a message to indicate the end of the program
-        System.out.printf("Main: The program has finished\n");
+        System.out.print("Main: The program has finished\n");
     }
 
 }

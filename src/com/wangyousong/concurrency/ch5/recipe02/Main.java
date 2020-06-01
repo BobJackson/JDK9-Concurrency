@@ -27,12 +27,12 @@ public class Main {
 
         // Write statistics about the pool
         do {
-            System.out.printf("******************************************\n");
+            System.out.print("******************************************\n");
             System.out.printf("Main: Parallelism: %d\n", commonPool.getParallelism());
             System.out.printf("Main: Active Threads: %d\n", commonPool.getActiveThreadCount());
             System.out.printf("Main: Task Count: %d\n", commonPool.getQueuedTaskCount());
             System.out.printf("Main: Steal Count: %d\n", commonPool.getStealCount());
-            System.out.printf("******************************************\n");
+            System.out.print("******************************************\n");
 
             try {
                 TimeUnit.SECONDS.sleep(1);

@@ -31,7 +31,7 @@ public class SearchNumberTask extends RecursiveTask<Integer> {
     /**
      * Array of numbers
      */
-    private final int numbers[];
+    private final int[] numbers;
 
     /**
      * Start and end positions of the block of numbers
@@ -52,13 +52,13 @@ public class SearchNumberTask extends RecursiveTask<Integer> {
     /**
      * Constructor of the class
      *
-     * @param array   Array of numbers
+     * @param numbers Array of numbers
      * @param start   Start position of the block of numbers this task has to process
      * @param end     End position of the block of numbers this task has to process
      * @param number  Number this task is going to look for
-     * @param manager
+     * @param manager Class that stores all the tasks that have been sent to a ForkJoinPool
      */
-    public SearchNumberTask(int numbers[], int start, int end, int number, TaskManager manager) {
+    public SearchNumberTask(int[] numbers, int start, int end, int number, TaskManager manager) {
         this.numbers = numbers;
         this.start = start;
         this.end = end;

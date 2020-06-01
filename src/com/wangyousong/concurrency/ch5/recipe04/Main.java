@@ -15,7 +15,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // Array of 100 integers
-        int array[] = new int[100];
+        int[] array = new int[100];
         // Task to process the array
         Task task = new Task(array, 0, 100);
         // ForkJoinPool to execute the Task
@@ -38,7 +38,7 @@ public class Main {
         // to the console
 
         if (task.isCompletedAbnormally()) {
-            System.out.printf("Main: An exception has ocurred\n");
+            System.out.print("Main: An exception has ocurred\n");
             System.out.printf("Main: %s\n", task.getException());
         }
 

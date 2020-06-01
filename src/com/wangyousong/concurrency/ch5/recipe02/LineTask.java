@@ -24,17 +24,18 @@ public class LineTask extends RecursiveTask<Integer> {
     /**
      * A line of the document
      */
-    private String line[];
+    private final String[] line;
 
     /**
      * Range of positions the task has to process
      */
-    private int start, end;
+    private final int start;
+    private final int end;
 
     /**
      * Word we are looking for
      */
-    private String word;
+    private final String word;
 
     /**
      * Constructor of the class
@@ -44,7 +45,7 @@ public class LineTask extends RecursiveTask<Integer> {
      * @param end   Position of the line where the task starts its process
      * @param word  Work we are looking for
      */
-    public LineTask(String line[], int start, int end, String word) {
+    public LineTask(String[] line, int start, int end, String word) {
         this.line = line;
         this.start = start;
         this.end = end;
@@ -84,10 +85,7 @@ public class LineTask extends RecursiveTask<Integer> {
      * @return The sum of the numbers
      */
     private Integer groupResults(Integer number1, Integer number2) {
-        Integer result;
-
-        result = number1 + number2;
-        return result;
+        return number1 + number2;
     }
 
     /**
