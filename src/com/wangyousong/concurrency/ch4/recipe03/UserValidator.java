@@ -37,7 +37,7 @@ public class UserValidator {
 
         // Sleep the thread during a random period of time
         try {
-            Long duration = (long) (Math.random() * 10);
+            long duration = (long) (Math.random() * 10);
             System.out.printf("Validator %s: Validating a user during %d seconds\n", this.name, duration);
             TimeUnit.SECONDS.sleep(duration);
         } catch (InterruptedException e) {

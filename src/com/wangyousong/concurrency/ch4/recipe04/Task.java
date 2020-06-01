@@ -28,13 +28,13 @@ public class Task implements Callable<Result> {
      * calculates the sum of five random numbers
      */
     @Override
-    public Result call() throws Exception {
+    public Result call() {
         // Writes a message to the console
         System.out.printf("%s: Staring\n", this.name);
 
         // Waits during a random period of time
         try {
-            Long duration = (long) (Math.random() * 10);
+            long duration = (long) (Math.random() * 10);
             System.out.printf("%s: Waiting %d seconds for results.\n", this.name, duration);
             TimeUnit.SECONDS.sleep(duration);
         } catch (InterruptedException e) {

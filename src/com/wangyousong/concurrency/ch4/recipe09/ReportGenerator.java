@@ -37,14 +37,13 @@ public class ReportGenerator implements Callable<String> {
     @Override
     public String call() throws Exception {
         try {
-            Long duration = (long) (Math.random() * 10);
+            long duration = (long) (Math.random() * 10);
             System.out.printf("%s_%s: ReportGenerator: Generating a report during %d seconds\n", this.sender, this.title, duration);
             TimeUnit.SECONDS.sleep(duration);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String ret = sender + ": " + title;
-        return ret;
+        return sender + ": " + title;
     }
 
 }

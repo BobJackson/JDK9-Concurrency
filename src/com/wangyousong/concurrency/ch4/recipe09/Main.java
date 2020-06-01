@@ -26,14 +26,14 @@ public class Main {
         Thread senderThread = new Thread(processor);
 
         // Start the Threads
-        System.out.printf("Main: Starting the Threads\n");
+        System.out.print("Main: Starting the Threads\n");
         faceThread.start();
         onlineThread.start();
         senderThread.start();
 
         // Wait for the end of the ReportGenerator tasks
         try {
-            System.out.printf("Main: Waiting for the report generators.\n");
+            System.out.print("Main: Waiting for the report generators.\n");
             faceThread.join();
             onlineThread.join();
         } catch (InterruptedException e) {
@@ -41,7 +41,7 @@ public class Main {
         }
 
         // Shutdown the executor
-        System.out.printf("Main: Shuting down the executor.\n");
+        System.out.print("Main: Shuting down the executor.\n");
         executor.shutdown();
         try {
             executor.awaitTermination(1, TimeUnit.DAYS);
@@ -50,7 +50,7 @@ public class Main {
         }
         // End the execution of the ReportSender
         processor.stopProcessing();
-        System.out.printf("Main: Ends\n");
+        System.out.print("Main: Ends\n");
 
     }
 

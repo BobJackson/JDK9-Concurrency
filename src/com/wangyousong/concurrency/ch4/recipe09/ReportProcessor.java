@@ -40,25 +40,26 @@ public class ReportProcessor implements Runnable {
     public void run() {
         while (!end) {
             try {
+                // poll() method -> If the queue is empty, it returns null immediately. Otherwise, it returns its first element and removes it from the queue.
+                // poll(long timeout, TimeUnit unit) -> Retrieves and removes the Future representing the next completed task, waiting if necessary up to the specified wait time if none are yet present.
+                // take() ->  If it is empty, it blocks the thread until the queue has an element. If the queue has elements, it returns and deletes its first element from the queue.
                 Future<String> result = service.poll(20, TimeUnit.SECONDS);
                 if (result != null) {
                     String report = result.get();
-                    System.out.printf("ReportProcessor: Report Recived: %s\n", report);
+                    System.out.printf("ReportProcessor: Report Received: %s\n", report);
                 }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
         }
 
-        System.out.printf("ReportProcessor: End\n");
+        System.out.print("ReportProcessor: End\n");
     }
 
     /**
      * Method that establish the value of the end attribute
      *
-     * @param end New value of the end attribute.
+     *
      */
     public void stopProcessing() {
         this.end = true;

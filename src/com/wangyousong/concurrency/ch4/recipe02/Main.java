@@ -50,15 +50,13 @@ public class Main {
         } while (executor.getCompletedTaskCount() < resultList.size());
 
         // Write the results
-        System.out.printf("Main: Results\n");
+        System.out.print("Main: Results\n");
         for (int i = 0; i < resultList.size(); i++) {
             Future<Integer> result = resultList.get(i);
             Integer number = null;
             try {
                 number = result.get();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
             System.out.printf("Core: Task %d: %d\n", i, number);

@@ -2,6 +2,7 @@ package com.wangyousong.concurrency.ch4.recipe04;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -16,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Create an executor
-        ExecutorService executor = (ExecutorService) Executors.newCachedThreadPool();
+        ExecutorService executor = Executors.newCachedThreadPool();
 
         // Create three tasks and stores them in a List
         List<Task> taskList = new ArrayList<>();
@@ -36,8 +37,8 @@ public class Main {
         executor.shutdown();
 
         // Writes the results to the console
-        System.out.printf("Core: Printing the results\n");
-        for (int i = 0; i < resultList.size(); i++) {
+        System.out.print("Core: Printing the results\n");
+        for (int i = 0; i < Objects.requireNonNull(resultList).size(); i++) {
             Future<Result> future = resultList.get(i);
             try {
                 Result result = future.get();

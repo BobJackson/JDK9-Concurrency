@@ -34,7 +34,7 @@ public class Server {
      * @param task The request made to the server
      */
     public void executeTask(Task task) {
-        System.out.printf("Server: A new task has arrived\n");
+        System.out.print("Server: A new task has arrived\n");
         executor.execute(task);
         System.out.printf("Server: Pool Size: %d\n", executor.getPoolSize());
         System.out.printf("Server: Active Count: %d\n", executor.getActiveCount());

@@ -14,6 +14,9 @@ public class Main {
 
     /**
      * Main method of the class
+     * there is a difference worth noticing：
+     * In the scheduledAtFixedRate() method, the third parameter determines the period of time between the starting of two executions.
+     * In the scheduledWithFixedRate() method, the parameter determines the period of time between the end of an execution of the task and its beginning.
      *
      * @param args
      */

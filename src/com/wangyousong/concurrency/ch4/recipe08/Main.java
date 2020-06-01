@@ -22,7 +22,7 @@ public class Main {
         ExecutorService executor = Executors.newCachedThreadPool();
 
         //Create five tasks
-        ResultTask resultTasks[] = new ResultTask[5];
+        ResultTask[] resultTasks = new ResultTask[5];
         for (int i = 0; i < 5; i++) {
             ExecutableTask executableTask = new ExecutableTask("Task " + i);
             resultTasks[i] = new ResultTask(executableTask);
@@ -38,15 +38,15 @@ public class Main {
 
         // Cancel all the tasks. In the tasks that have finished before this moment, this
         // cancellation has no effects
-        for (int i = 0; i < resultTasks.length; i++) {
-            resultTasks[i].cancel(true);
+        for (ResultTask resultTask : resultTasks) {
+            resultTask.cancel(true);
         }
 
         // Write the results of those tasks that haven't been cancelled
-        for (int i = 0; i < resultTasks.length; i++) {
+        for (ResultTask resultTask : resultTasks) {
             try {
-                if (!resultTasks[i].isCancelled()) {
-                    System.out.printf("%s\n", resultTasks[i].get());
+                if (!resultTask.isCancelled()) {
+                    System.out.printf("%s\n", resultTask.get());
                 }
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();

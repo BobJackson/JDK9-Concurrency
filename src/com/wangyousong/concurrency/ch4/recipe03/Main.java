@@ -37,7 +37,8 @@ public class Main {
         taskList.add(dbTask);
 
         // Create a new Executor
-        ExecutorService executor = (ExecutorService) Executors.newCachedThreadPool();
+        ExecutorService executor = Executors.newCachedThreadPool();
+
         String result;
         try {
             // Send the list of tasks to the executor and waits for the result of the first task
@@ -45,15 +46,13 @@ public class Main {
             // method throws and ExecutionException.
             result = executor.invokeAny(taskList);
             System.out.printf("Main: Result: %s\n", result);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
         // Shutdown the Executor
         executor.shutdown();
-        System.out.printf("Main: End of the Execution\n");
+        System.out.print("Main: End of the Execution\n");
     }
 
 }

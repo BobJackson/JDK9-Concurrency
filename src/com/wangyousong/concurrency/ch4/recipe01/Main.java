@@ -16,22 +16,22 @@ public class Main {
         Server server = new Server();
 
         // Send 100 request to the server and finish
-        System.out.printf("Main: Starting.\n");
+        System.out.print("Main: Starting.\n");
         for (int i = 0; i < 100; i++) {
             Task task = new Task("Task " + i);
             server.executeTask(task);
         }
 
         // Shutdown the executor
-        System.out.printf("Main: Shuting down the Executor.\n");
+        System.out.print("Main: Shuting down the Executor.\n");
         server.endServer();
 
         // Send a new task. This task will be rejected
-        System.out.printf("Main: Sending another Task.\n");
+        System.out.print("Main: Sending another Task.\n");
         Task task = new Task("Rejected task");
         server.executeTask(task);
 
-        System.out.printf("Main: End.\n");
+        System.out.print("Main: End.\n");
 
     }
 
