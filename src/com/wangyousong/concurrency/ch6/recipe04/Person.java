@@ -4,6 +4,9 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.Objects;
 
+// Take into account that if you use the sorted method, you have to provide Comparator that
+// can be applied to the elements you want to sort or the elements of the stream must
+// implement the Comparable interface.
 public class Person implements Comparable<Person> {
 
     private int id;
@@ -13,7 +16,8 @@ public class Person implements Comparable<Person> {
     private int salary;
     private double coeficient;
 
-    private static Comparator<Person> comparator = Comparator.comparing(Person::getLastName).thenComparing(Person::getFirstName);
+    private static final Comparator<Person> comparator = Comparator.comparing(Person::getLastName)
+            .thenComparing(Person::getFirstName);
 
     /**
      * @return the id

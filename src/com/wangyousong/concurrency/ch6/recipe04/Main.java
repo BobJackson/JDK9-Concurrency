@@ -9,54 +9,46 @@ public class Main {
         List<Person> persons = PersonGenerator.generatePersonList(10);
 
         // For each parallel
-        System.out.printf("********************************************************\n");
-        System.out.printf("Parallel forEach()\n");
-        persons.parallelStream().forEach(p -> {
-            System.out.printf("%s, %s\n", p.getLastName(), p.getFirstName());
-        });
-        System.out.printf("********************************************************\n");
-        System.out.printf("\n");
+        System.out.print("********************************************************\n");
+        System.out.print("*Parallel forEach()\n");
+        persons.parallelStream().forEach(p -> System.out.printf("*%s, %s\n", p.getLastName(), p.getFirstName()));
+        System.out.print("********************************************************\n");
+        System.out.print("*\n");
 
         // For each ordered
         List<Double> doubles = DoubleGenerator.generateDoubleList(10, 100);
 
         // For each ordered parallel with numbers
-        System.out.printf("********************************************************\n");
-        System.out.printf("Parallel forEachOrdered() with numbers\n");
-        doubles.parallelStream().sorted().forEachOrdered(n -> {
-            System.out.printf("%f\n", n);
-        });
-        System.out.printf("********************************************************\n");
-        System.out.printf("\n");
+        System.out.print("********************************************************\n");
+        System.out.print("*Parallel forEachOrdered() with numbers\n");
+        doubles.parallelStream().sorted().forEachOrdered(n -> System.out.printf("*%f\n", n));
+        System.out.print("********************************************************\n");
+        System.out.print("*\n");
 
         // For each after sort with numbers
-        System.out.printf("********************************************************\n");
-        System.out.printf("Parallel forEach() after sorted() with numbers\n");
-        doubles.parallelStream().sorted().forEach(n -> {
-            System.out.printf("%f\n", n);
-        });
-        System.out.printf("********************************************************\n");
-        System.out.printf("\n");
+        System.out.print("********************************************************\n");
+        System.out.print("*Parallel forEach() after sorted() with numbers\n");
+        doubles.parallelStream().sorted().forEach(n -> System.out.printf("*%f\n", n));
+        System.out.print("********************************************************\n");
+        System.out.print("*\n");
 
         // For each ordered parallel with objects
-        System.out.printf("********************************************************\n");
-        System.out.printf("Parallel forEachOrdered with Persons\n");
-        persons.parallelStream().sorted().forEachOrdered(p -> {
-            System.out.printf("%s, %s\n", p.getLastName(), p.getFirstName());
-        });
-        System.out.printf("********************************************************\n");
-        System.out.printf("\n");
+        System.out.print("********************************************************\n");
+        System.out.print("*Parallel forEachOrdered with Persons\n");
+        persons.parallelStream().sorted().forEachOrdered(p -> System.out.printf("*%s, %s\n", p.getLastName(), p.getFirstName()));
+        System.out.print("********************************************************\n");
+        System.out.print("*\n");
 
         // Peek
-        System.out.printf("********************************************************\n");
-        System.out.printf("Peek\n");
+        System.out.print("********************************************************\n");
+        System.out.print("*Peek\n");
         doubles
                 .parallelStream()
-                .peek(d -> System.out.printf("Step 1: Number: %f\n", d))
+                .peek(d -> System.out.printf("*Step 1: Number: %f\n", d))
                 .filter(n -> n < 50)
-                .peek(d -> System.out.printf("Step 2: Number: %f\n", d))
-                .forEach(d -> System.out.printf("Final Step: Number: %f\n", d));
-        System.out.printf("********************************************************\n");
+                .peek(d -> System.out.printf("*Step 2: Number: %f\n", d))
+                .forEach(d -> System.out.printf("*Final Step: Number: %f\n", d));
+        System.out.print("********************************************************\n");
 
 
     }

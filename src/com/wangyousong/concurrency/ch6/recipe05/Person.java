@@ -1,5 +1,6 @@
 package com.wangyousong.concurrency.ch6.recipe05;
 
+import java.util.Comparator;
 import java.util.Date;
 
 public class Person implements Comparable<Person> {
@@ -10,6 +11,9 @@ public class Person implements Comparable<Person> {
     private Date birthDate;
     private int salary;
     private double coeficient;
+
+    private static final Comparator<Person> comparator = Comparator.comparing(Person::getLastName)
+            .thenComparing(Person::getFirstName);
 
     /**
      * @return the id
@@ -107,12 +111,7 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person otherPerson) {
-        int compareLastNames = this.getLastName().compareTo(otherPerson.getLastName());
-        if (compareLastNames != 0) {
-            return compareLastNames;
-        } else {
-            return this.getFirstName().compareTo(otherPerson.getFirstName());
-        }
+        return comparator.compare(this, otherPerson);
     }
 
     /*
