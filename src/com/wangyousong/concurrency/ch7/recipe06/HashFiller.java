@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class HashFiller implements Runnable {
 
-    private ConcurrentHashMap<String, ConcurrentLinkedDeque<Operation>> userHash;
+    private final ConcurrentHashMap<String, ConcurrentLinkedDeque<Operation>> userHash;
 
     public HashFiller(ConcurrentHashMap<String, ConcurrentLinkedDeque<Operation>> userHash) {
         this.userHash = userHash;
@@ -33,6 +33,8 @@ public class HashFiller implements Runnable {
     private void addOperationToHash(ConcurrentHashMap<String, ConcurrentLinkedDeque<Operation>> userHash,
                                     Operation operation) {
 
+        // To solve problem : If two threads want to add the same key at the same time, you can lose the data
+        // inserted by one of the threads and have a data-race condition
         ConcurrentLinkedDeque<Operation> opList = userHash.computeIfAbsent(operation.getUser(), user -> new ConcurrentLinkedDeque<>());
 
         opList.add(operation);

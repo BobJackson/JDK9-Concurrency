@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Task implements Runnable {
 
-    private Flag flag;
+    private final Flag flag;
 
     public Task(Flag flag) {
         this.flag = flag;
@@ -16,7 +16,7 @@ public class Task implements Runnable {
         while (flag.flag) {
             i++;
         }
-        System.out.printf("Task: %d - %s\n", i, new Date());
+        System.out.printf("Task: %d stopped- %s\n", i, new Date());
     }
 
 }

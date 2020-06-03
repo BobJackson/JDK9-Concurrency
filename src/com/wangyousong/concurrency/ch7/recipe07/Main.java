@@ -8,6 +8,10 @@ public class Main {
 
     /**
      * Main method of the example
+     * Basically, the operation gets the value of the variable, changes
+     * the value to a local variable, and then tries to change the old value with the new one. If the
+     * old value is still the same, it is substituted; if not, the method begins the operation again.
+     * This operation is called Compare and Set（CAS）.
      *
      * @param args
      */

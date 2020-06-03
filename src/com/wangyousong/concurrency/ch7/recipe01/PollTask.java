@@ -29,6 +29,7 @@ public class PollTask implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 5000; i++) {
+            // Retrieves and removes the first element of this deque, or returns null if this deque is empty.
             list.pollFirst();
             list.pollLast();
         }

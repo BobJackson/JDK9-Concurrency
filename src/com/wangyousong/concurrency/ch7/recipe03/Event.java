@@ -50,12 +50,6 @@ public class Event implements Comparable<Event> {
      */
     @Override
     public int compareTo(Event e) {
-        if (this.priority > e.getPriority()) {
-            return -1;
-        } else if (this.priority < e.getPriority()) {
-            return 1;
-        } else {
-            return 0;
-        }
+        return Integer.compare(e.getPriority(), this.priority);
     }
 }

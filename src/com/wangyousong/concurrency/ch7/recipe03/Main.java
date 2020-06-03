@@ -21,7 +21,7 @@ public class Main {
         /*
          * An array to store the five Thread objects
          */
-        Thread taskThreads[] = new Thread[5];
+        Thread[] taskThreads = new Thread[5];
 
         /*
          * Create the five threads to execute five tasks
@@ -34,16 +34,16 @@ public class Main {
         /*
          * Start the five threads
          */
-        for (int i = 0; i < taskThreads.length; i++) {
-            taskThreads[i].start();
+        for (Thread taskThread : taskThreads) {
+            taskThread.start();
         }
 
         /*
          * Wait for the finalization of the five threads
          */
-        for (int i = 0; i < taskThreads.length; i++) {
+        for (Thread taskThread : taskThreads) {
             try {
-                taskThreads[i].join();
+                taskThread.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -55,9 +55,10 @@ public class Main {
         System.out.printf("Main: Queue Size: %d\n", queue.size());
         for (int i = 0; i < taskThreads.length * 1000; i++) {
             Event event = queue.poll();
+            assert event != null;
             System.out.printf("Thread %s: Priority %d\n", event.getThread(), event.getPriority());
         }
         System.out.printf("Main: Queue Size: %d\n", queue.size());
-        System.out.printf("Main: End of the program\n");
+        System.out.print("Main: End of the program\n");
     }
 }

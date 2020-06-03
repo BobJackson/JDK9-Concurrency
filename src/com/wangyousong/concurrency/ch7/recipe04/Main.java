@@ -23,7 +23,7 @@ public class Main {
         /*
          * An array to store the Thread objects that execute the tasks
          */
-        Thread threads[] = new Thread[5];
+        Thread[] threads = new Thread[5];
 
         /*
          * Create the five tasks
@@ -36,15 +36,15 @@ public class Main {
         /*
          * Execute the five tasks
          */
-        for (int i = 0; i < threads.length; i++) {
-            threads[i].start();
+        for (Thread thread : threads) {
+            thread.start();
         }
 
         /*
          * Wait for the finalization of the five tasks
          */
-        for (int i = 0; i < threads.length; i++) {
-            threads[i].join();
+        for (Thread thread : threads) {
+            thread.join();
         }
 
         /*

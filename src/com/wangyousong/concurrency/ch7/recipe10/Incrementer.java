@@ -15,7 +15,9 @@ public class Incrementer implements Runnable {
 	public void run() {
 		VarHandle handler;
 		try {
-			handler = MethodHandles.lookup().in(Account.class).findVarHandle(Account.class, "amount", double.class);
+			handler = MethodHandles.lookup()
+					.in(Account.class)
+					.findVarHandle(Account.class, "amount", double.class);
 			for (int i = 0; i < 10000; i++) {
 				handler.getAndAdd(account, 100);
 				account.unsafeAmount += 100;

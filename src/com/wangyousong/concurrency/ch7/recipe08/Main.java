@@ -5,6 +5,17 @@ import java.util.concurrent.atomic.AtomicIntegerArray;
 /**
  * Main class of the example. Execute 100 incrementers and 100 decrementers
  * and checks that the results are the expected
+ * <p>
+ * CAS:
+ * 优点：
+ * （1）None Deadlock; (synchronized)
+ * （2）don't have to execute the code necessary to get and release the lock. (Lock)
+ * <p>
+ * 缺点：This mechanism also has its drawbacks.
+ * （1）Operations must be free from any side effects as they might be retried using livelocks with
+ * highly contended resources;
+ * （2） they are also harder to monitor for performance when
+ * compared with standard locks.
  */
 public class Main {
 
@@ -30,8 +41,8 @@ public class Main {
         /*
          * Create and execute 100 incrementer and 100 decrementer tasks
          */
-        Thread threadIncrementer[] = new Thread[THREADS];
-        Thread threadDecrementer[] = new Thread[THREADS];
+        Thread[] threadIncrementer = new Thread[THREADS];
+        Thread[] threadDecrementer = new Thread[THREADS];
         for (int i = 0; i < THREADS; i++) {
             threadIncrementer[i] = new Thread(incrementer);
             threadDecrementer[i] = new Thread(decrementer);
@@ -64,7 +75,7 @@ public class Main {
         }
 
         if (errors == 0) {
-            System.out.printf("No errors found\n");
+            System.out.print("No errors found\n");
         }
 
         System.out.println("Main: End of the example");

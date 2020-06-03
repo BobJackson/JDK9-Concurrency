@@ -22,7 +22,7 @@ public class Main {
         /*
          * Create an array to store the 26 threads that execute the tasks
          */
-        Thread threads[] = new Thread[26];
+        Thread[] threads = new Thread[26];
         int counter = 0;
 
         /*
@@ -57,6 +57,7 @@ public class Main {
         Map.Entry<String, Contact> element;
         Contact contact;
 
+        // The method firstEntry() and lastEntry() doesn't remove the element from the map
         element = map.firstEntry();
         contact = element.getValue();
         System.out.printf("Main: First Entry: %s: %s\n", contact.getName(), contact.getPhone());
@@ -71,7 +72,8 @@ public class Main {
         /*
          * Write a subset of the map
          */
-        System.out.printf("Main: Submap from A1996 to B1002: \n");
+        System.out.print("Main: Submap from A1996 to B1002: \n");
+        // subMap(K fromKey, K toKey) , toKey is excluded
         ConcurrentNavigableMap<String, Contact> submap = map.subMap("A1996", "B1002");
         do {
             element = submap.pollFirstEntry();

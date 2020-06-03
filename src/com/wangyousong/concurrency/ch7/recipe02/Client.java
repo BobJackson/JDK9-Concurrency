@@ -33,7 +33,7 @@ public class Client implements Runnable {
                 e.printStackTrace();
             }
         }
-        System.out.printf("Client: End.\n");
+        System.out.print("Client: End.\n");
     }
 
 }

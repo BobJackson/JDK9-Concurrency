@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class VolatileTask implements Runnable {
 
-    private VolatileFlag flag;
+    private final VolatileFlag flag;
 
     public VolatileTask(VolatileFlag flag) {
         this.flag = flag;
@@ -16,7 +16,7 @@ public class VolatileTask implements Runnable {
         while (flag.flag) {
             i++;
         }
-        System.out.printf("VolatileTask: Stoped %d - %s\n", i, new Date());
+        System.out.printf("VolatileTask: Stopped %d - %s\n", i, new Date());
     }
 
 }
