@@ -5,9 +5,7 @@ import java.util.stream.StreamSupport;
 public class Main {
 
     public static void main(String[] args) {
-        Item[][] items;
-
-        items = new Item[10][10];
+        Item[][] items = new Item[10][10];
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
@@ -20,9 +18,8 @@ public class Main {
 
         MySpliterator mySpliterator = new MySpliterator(items, 0, items.length);
 
-        StreamSupport.stream(mySpliterator, true).forEach(item -> {
-            System.out.printf("%s: %s\n", Thread.currentThread().getName(), item.getName());
-        });
+        StreamSupport.stream(mySpliterator, true)
+                .forEach(item -> System.out.printf("%s: %s\n", Thread.currentThread().getName(), item.getName()));
 
     }
 

@@ -51,7 +51,7 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
      */
     @Override
     public boolean tryTransfer(E e) {
-        boolean value = false;
+        boolean value;
         try {
             lock.lock();
             if (counter.get() == 0) {
@@ -112,7 +112,7 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
             }
             return true;
         } else {
-            long newTimeout = 0;
+            long newTimeout;
             try {
                 transfered.add(e);
                 newTimeout = TimeUnit.MILLISECONDS.convert(timeout, unit);
@@ -162,7 +162,7 @@ public class MyPriorityTransferQueue<E> extends PriorityBlockingQueue<E> impleme
     @Override
     public E take() throws InterruptedException {
         lock.lock();
-        E value = null;
+        E value;
         try {
             counter.incrementAndGet();
             value = transfered.poll();

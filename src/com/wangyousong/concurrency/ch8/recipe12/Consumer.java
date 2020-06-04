@@ -6,7 +6,7 @@ import java.util.concurrent.Flow.Subscription;
 public class Consumer implements Subscriber<News> {
 
     private Subscription subscription;
-    private String name;
+    private final String name;
 
     public Consumer(String name) {
         this.name = name;

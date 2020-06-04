@@ -34,7 +34,7 @@ public class Main {
             try {
                 value = lock.tryLock(1, TimeUnit.SECONDS);
                 if (!value) {
-                    System.out.printf("Main: Trying to get the Lock\n");
+                    System.out.print("Main: Trying to get the Lock\n");
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -45,13 +45,13 @@ public class Main {
         /*
          * The main thread release the lock
          */
-        System.out.printf("Main: Got the lock\n");
+        System.out.print("Main: Got the lock\n");
         lock.unlock();
 
         /*
          * Write a message in the console indicating the end of the program
          */
-        System.out.printf("Main: End of the program\n");
+        System.out.print("Main: End of the program\n");
     }
 
 }

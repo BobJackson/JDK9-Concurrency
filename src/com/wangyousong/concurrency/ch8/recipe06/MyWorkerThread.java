@@ -13,6 +13,8 @@ public class MyWorkerThread extends ForkJoinWorkerThread {
 
     /**
      * ThreadLocal attribute to store the number of tasks executed by each thread
+     * You implemented the counter with a ThreadLocal attribute. This way, each thread will have its own counter in a
+     * transparent way for you, the programmer.
      */
     private final static ThreadLocal<Integer> taskCounter = new ThreadLocal<>();
 
@@ -52,7 +54,6 @@ public class MyWorkerThread extends ForkJoinWorkerThread {
      */
     public void addTask() {
         taskCounter.set(taskCounter.get() + 1);
-        ;
     }
 
 }

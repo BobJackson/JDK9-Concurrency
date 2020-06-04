@@ -40,6 +40,6 @@ public class Main {
         /*
          * Writ a message indicating the end of the program
          */
-        System.out.printf("Main: End of the program.\n");
+        System.out.print("Main: End of the program.\n");
     }
 }

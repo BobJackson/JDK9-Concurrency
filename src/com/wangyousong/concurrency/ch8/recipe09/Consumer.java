@@ -28,7 +28,13 @@ public class Consumer implements Runnable {
         for (int i = 0; i < 1002; i++) {
             try {
                 Event value = buffer.take();
-                System.out.printf("Consumer: %s: %d\n", value.getThread(), value.getPriority());
+                int priority = value.getPriority();
+                if (priority == 0) {
+                    System.out.println("===========" + value.getThread() + "===========");
+                    // ===========Core Event===========
+                    // ===========Core Event 2===========
+                }
+                System.out.printf("Consumer: %s: %d\n", value.getThread(), priority);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

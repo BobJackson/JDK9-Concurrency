@@ -11,12 +11,12 @@ public class MyThreadFactory implements ThreadFactory {
     /**
      * Attribute to store the number of threads created in this factory
      */
-    private AtomicInteger counter;
+    private final AtomicInteger counter;
 
     /**
      * String to create the name of the threads created with this factory
      */
-    private String prefix;
+    private final String prefix;
 
     /**
      * Constructor of the class. Initialize its parameters
@@ -33,8 +33,7 @@ public class MyThreadFactory implements ThreadFactory {
      */
     @Override
     public Thread newThread(Runnable r) {
-        MyThread myThread = new MyThread(r, prefix + "-" + counter.getAndIncrement());
-        return myThread;
+        return new MyThread(r, prefix + "-" + counter.getAndIncrement());
     }
 
 }

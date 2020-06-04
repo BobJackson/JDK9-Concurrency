@@ -18,12 +18,12 @@ public class MyScheduledTask<V> extends FutureTask<V> implements RunnableSchedul
     /**
      * Attribute to store the task that will be used to create a MyScheduledTask
      */
-    private RunnableScheduledFuture<V> task;
+    private final RunnableScheduledFuture<V> task;
 
     /**
      * ScheduledThreadPoolExecutor that is going to execute the task
      */
-    private ScheduledThreadPoolExecutor executor;
+    private final ScheduledThreadPoolExecutor executor;
 
     /**
      * Period of time between two executions of the task
@@ -62,6 +62,14 @@ public class MyScheduledTask<V> extends FutureTask<V> implements RunnableSchedul
             return task.getDelay(unit);
         } else {
             if (startDate == 0) {
+                // Delayed tasks can execute both Callable and Runnable objects, but periodic tasks can
+                // only execute Runnable objects.
+//                try {
+//                    V v = task.get(); // InterruptedException
+//                    System.out.println(v);
+//                } catch (InterruptedException | ExecutionException e) {
+//                    e.printStackTrace();
+//                }
                 return task.getDelay(unit);
             } else {
                 Date now = new Date();
@@ -110,7 +118,7 @@ public class MyScheduledTask<V> extends FutureTask<V> implements RunnableSchedul
     /**
      * Method that establish the period of the task for periodic tasks
      *
-     * @param period
+     * @param period period
      */
     public void setPeriod(long period) {
         this.period = period;

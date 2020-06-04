@@ -55,6 +55,18 @@ public class Main {
          */
         executor.scheduleAtFixedRate(task, 1, 3, TimeUnit.SECONDS);
 
+        // 编译错误
+        // 'scheduleAtFixedRate(java.lang.Runnable, long, long, java.util.concurrent.TimeUnit)' in
+        // 'com.wangyousong.concurrency.ch8.recipe05.MyScheduledThreadPoolExecutor'
+        // cannot be applied to '(anonymous java.util.concurrent.Callable<java.lang.String>, int, int, java.util.concurrent.TimeUnit)'
+        // 下面的方法声明说不支持Callable，只能是Runnable
+//        executor.scheduleAtFixedRate(new Callable<String>(){
+//            @Override
+//            public String call() throws Exception {
+//                return new Date().toString();
+//            }
+//        },1,2,TimeUnit.SECONDS);
+
         /*
          * Sleep the thread during ten seconds
          */
@@ -73,7 +85,7 @@ public class Main {
         /*
          * Write a message indicating the end of the program
          */
-        System.out.printf("Main: End of the program.\n");
+        System.out.print("Main: End of the program.\n");
     }
 
 }

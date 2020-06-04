@@ -8,7 +8,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Main clas of the example. It creates a custom executor and executes 10 tasks in it
+ * Main class of the example. It creates a custom executor and executes 10 tasks in it
  */
 public class Main {
 
@@ -20,7 +20,7 @@ public class Main {
         /*
          * Creation of the custom executor
          */
-        MyExecutor myExecutor = new MyExecutor(4, 8, 1000, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<Runnable>());
+        MyExecutor myExecutor = new MyExecutor(4, 8, 1000, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>());
 
         /*
          * Create a list to store the objects to control the execution of the tasks
@@ -77,7 +77,7 @@ public class Main {
         /*
          * Write a message indicating the end of the program
          */
-        System.out.printf("Main: End of the program.\n");
+        System.out.print("Main: End of the program.\n");
     }
 
 }

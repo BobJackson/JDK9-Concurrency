@@ -38,9 +38,9 @@ public class Main {
         /*
          * Write the thread info to the console
          */
-        System.out.printf("Main: Thread information.\n");
+        System.out.print("Main: Thread information.\n");
         System.out.printf("%s\n", thread);
-        System.out.printf("Main: End of the example.\n");
+        System.out.print("Main: End of the example.\n");
 
     }
 

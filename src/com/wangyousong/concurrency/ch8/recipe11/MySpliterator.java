@@ -5,8 +5,9 @@ import java.util.function.Consumer;
 
 public class MySpliterator implements Spliterator<Item> {
 
-    private Item[][] items;
-    private int start, end, current;
+    private final Item[][] items;
+    private final int start;
+    private int end, current;
 
     public MySpliterator(Item[][] items, int start, int end) {
         this.items = items;
@@ -33,39 +34,38 @@ public class MySpliterator implements Spliterator<Item> {
                 consumer.accept(items[current][i]);
             }
             current++;
-            System.out.printf("MySpliterator.tryAdvance.end:true\n");
+            System.out.print("MySpliterator.tryAdvance.end:true\n");
             return true;
         }
-        System.out.printf("MySpliterator.tryAdvance.end:false\n");
+        System.out.print("MySpliterator.tryAdvance.end:false\n");
         return false;
     }
 
     @Override
     public void forEachRemaining(Consumer<? super Item> consumer) {
-        System.out.printf("MySpliterator.forEachRemaining.start\n");
+        System.out.print("MySpliterator.forEachRemaining.start\n");
         boolean ret;
         do {
             ret = tryAdvance(consumer);
         } while (ret);
-        System.out.printf("MySpliterator.forEachRemaining.end\n");
+        System.out.print("MySpliterator.forEachRemaining.end\n");
     }
 
 
     @Override
     public Spliterator<Item> trySplit() {
-        System.out.printf("MySpliterator.trySplit.start\n");
+        System.out.print("MySpliterator.trySplit.start\n");
 
         if (end - start <= 2) {
-            System.out.printf("MySpliterator.trySplit.end\n");
+            System.out.print("MySpliterator.trySplit.end\n");
             return null;
         }
         int mid = start + ((end - start) / 2);
-        int newStart = mid;
         int newEnd = end;
         end = mid;
-        System.out.printf("MySpliterator.trySplit.end: %d, %d, %d, %d, %d, %d\n", start, mid, end, newStart, newEnd, current);
+        System.out.printf("MySpliterator.trySplit.end: %d, %d, %d, %d, %d, %d\n", start, mid, end, mid, newEnd, current);
 
-        return new MySpliterator(items, newStart, newEnd);
+        return new MySpliterator(items, mid, newEnd);
     }
 
 }

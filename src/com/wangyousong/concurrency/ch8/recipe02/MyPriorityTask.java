@@ -13,12 +13,12 @@ public class MyPriorityTask implements Runnable, Comparable<MyPriorityTask> {
     /**
      * This attribute stores the priority of the task
      */
-    private int priority;
+    private final int priority;
 
     /**
      * This attribute stores the name of the task
      */
-    private String name;
+    private final String name;
 
     /**
      * Constructor of the task. It initialize its attributes

@@ -39,7 +39,7 @@ public class MyExecutor extends ThreadPoolExecutor {
      */
     @Override
     public void shutdown() {
-        System.out.printf("MyExecutor: Going to shutdown.\n");
+        System.out.print("MyExecutor: Going to shutdown.\n");
         System.out.printf("MyExecutor: Executed tasks: %d\n", getCompletedTaskCount());
         System.out.printf("MyExecutor: Running tasks: %d\n", getActiveCount());
         System.out.printf("MyExecutor: Pending tasks: %d\n", getQueue().size());
@@ -52,7 +52,7 @@ public class MyExecutor extends ThreadPoolExecutor {
      */
     @Override
     public List<Runnable> shutdownNow() {
-        System.out.printf("MyExecutor: Going to immediately shutdown.\n");
+        System.out.print("MyExecutor: Going to immediately shutdown.\n");
         System.out.printf("MyExecutor: Executed tasks: %d\n", getCompletedTaskCount());
         System.out.printf("MyExecutor: Running tasks: %d\n", getActiveCount());
         System.out.printf("MyExecutor: Pending tasks: %d\n", getQueue().size());
@@ -75,14 +75,14 @@ public class MyExecutor extends ThreadPoolExecutor {
     protected void afterExecute(Runnable r, Throwable t) {
         Future<?> result = (Future<?>) r;
         try {
-            System.out.printf("*********************************\n");
-            System.out.printf("MyExecutor: A task is finishing.\n");
+            System.out.print("*********************************\n");
+            System.out.print("MyExecutor: A task is finishing.\n");
             System.out.printf("MyExecutor: Result: %s\n", result.get());
             Date startDate = startTimes.remove(r);
             Date finishDate = new Date();
             long diff = finishDate.getTime() - startDate.getTime();
             System.out.printf("MyExecutor: Duration: %d\n", diff);
-            System.out.printf("*********************************\n");
+            System.out.print("*********************************\n");
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }

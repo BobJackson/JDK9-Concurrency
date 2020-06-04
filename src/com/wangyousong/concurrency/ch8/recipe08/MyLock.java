@@ -80,6 +80,7 @@ public class MyLock implements Lock {
 
     /**
      * Method that creates a new condition for the lock
+     * ConditionObject is an inner-class belongs to AbstractQueuedSynchronizer
      */
     @Override
     public Condition newCondition() {

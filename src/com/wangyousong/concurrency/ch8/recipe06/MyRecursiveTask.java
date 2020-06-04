@@ -18,12 +18,12 @@ public class MyRecursiveTask extends RecursiveTask<Integer> {
     /**
      * Array to be summed
      */
-    private int array[];
+    private final int[] array;
 
     /**
      * Start and end positions of the part of the array to be summed by this task
      */
-    private int start, end;
+    private final int start, end;
 
     /**
      * Constructor of the class. It initializes the  attributes of the task
@@ -32,7 +32,7 @@ public class MyRecursiveTask extends RecursiveTask<Integer> {
      * @param start Start position of the block of the array to be summed by this task
      * @param end   End position of the block of the array to be summed by this task
      */
-    public MyRecursiveTask(int array[], int start, int end) {
+    public MyRecursiveTask(int[] array, int start, int end) {
         this.array = array;
         this.start = start;
         this.end = end;
@@ -69,7 +69,6 @@ public class MyRecursiveTask extends RecursiveTask<Integer> {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         return ret;
     }
 
@@ -83,11 +82,8 @@ public class MyRecursiveTask extends RecursiveTask<Integer> {
     private Integer addResults(MyRecursiveTask task1, MyRecursiveTask task2) {
         int value;
         try {
-            value = task1.get().intValue() + task2.get().intValue();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            value = 0;
-        } catch (ExecutionException e) {
+            value = task1.get() + task2.get();
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
             value = 0;
         }

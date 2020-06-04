@@ -14,16 +14,17 @@ public class Task extends MyWorkerTask {
     /**
      * Array of integers. This task will increment all the elements of the array
      */
-    private int array[];
+    private final int[] array;
     /**
      * First element of the array that this task is going to increment
      */
-    private int start;
+    private final int start;
 
     /**
      * Last element of the array that this task is going to increment
      */
-    private int end;
+    private final int end;
+
 
     /**
      * Constructor of the class. It initializes its attributes
@@ -33,7 +34,7 @@ public class Task extends MyWorkerTask {
      * @param start First element of the array to be incremented by this task
      * @param end   Last element of the array to be incremented by this task
      */
-    public Task(String name, int array[], int start, int end) {
+    public Task(String name, int[] array, int start, int end) {
         super(name);
         this.array = array;
         this.start = start;
@@ -47,6 +48,7 @@ public class Task extends MyWorkerTask {
      */
     @Override
     protected void compute() {
+//        System.out.println("*****************" + Thread.currentThread().getName() + " is invoking compute()" + "*****************");
         if (end - start > 100) {
             int mid = (end + start) / 2;
             Task task1 = new Task(this.getName() + "1", array, start, mid);

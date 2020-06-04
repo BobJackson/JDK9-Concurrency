@@ -18,7 +18,7 @@ public abstract class MyWorkerTask extends ForkJoinTask<Void> {
     /**
      * Name of the task
      */
-    private String name;
+    private final String name;
 
     /**
      * Constructor of the class. Initializes its attributes

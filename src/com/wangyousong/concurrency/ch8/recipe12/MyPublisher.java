@@ -1,19 +1,20 @@
 package com.wangyousong.concurrency.ch8.recipe12;
 
+import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Flow.Publisher;
 import java.util.concurrent.Flow.Subscriber;
-import java.util.concurrent.ThreadPoolExecutor;
 
 public class MyPublisher implements Publisher<News> {
 
-    private ConcurrentLinkedDeque<ConsumerData> consumers;
-    private ThreadPoolExecutor executor;
+    private final Queue<ConsumerData> consumers;
+    private final Executor executor;
 
     public MyPublisher() {
         consumers = new ConcurrentLinkedDeque<>();
-        executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.wangyousong.concurrency.ch8.recipe06;
 
+import java.util.Arrays;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.TimeUnit;
 
@@ -23,15 +24,14 @@ public class Main {
          * Create new ForkJoinPool, passing as parameter the factory created before
          */
         ForkJoinPool pool = new ForkJoinPool(4, factory, null, false);
+//        ForkJoinPool pool = new ForkJoinPool(4, factory, null, true);
 
         /*
          * Create and initializes the elements of the array
          */
-        int array[] = new int[100000];
+        int[] array = new int[100000];
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = 1;
-        }
+        Arrays.fill(array, 1);
 
         /*
          * Create a new Task to sum the elements of the array
@@ -67,7 +67,7 @@ public class Main {
         /*
          * Write a message indicating the end of the program
          */
-        System.out.printf("Main: End of the program\n");
+        System.out.print("Main: End of the program\n");
     }
 
 }

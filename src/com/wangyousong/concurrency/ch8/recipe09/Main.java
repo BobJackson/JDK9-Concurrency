@@ -4,6 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Main class of the example.
+ * <p>
+ * Elements of LinkedTransferQueue are stored in the same order as they arrive, so the ones
+ * that arrived earlier are consumed first. It may be the case when you want to develop a
+ * producer/consumer program, where data is consumed according to some priority instead of
+ * arrival time. In this recipe, you will learn how to use PriorityBlockingQueue to implement
+ * a data structure to be used in the producer/consumer problem whose elements will be
+ * ordered by priority; elements with higher priority will be consumed first.
  */
 public class Main {
 
@@ -25,7 +32,7 @@ public class Main {
         /*
          * Launch 10 producers
          */
-        Thread producerThreads[] = new Thread[10];
+        Thread[] producerThreads = new Thread[10];
         for (int i = 0; i < producerThreads.length; i++) {
             producerThreads[i] = new Thread(producer);
             producerThreads[i].start();
@@ -48,13 +55,13 @@ public class Main {
          */
         Event myEvent = new Event("Core Event", 0);
         buffer.transfer(myEvent);
-        System.out.printf("Main: My Event has ben transfered.\n");
+        System.out.print("Main: My Event has ben transfered.\n");
 
         /*
          * Wait for the finalization of the producers
          */
-        for (int i = 0; i < producerThreads.length; i++) {
-            producerThreads[i].join();
+        for (Thread producerThread : producerThreads) {
+            producerThread.join();
         }
 
         /*
@@ -81,7 +88,7 @@ public class Main {
         /*
          * Write a message indicating the end of the program
          */
-        System.out.printf("Main: End of the program\n");
+        System.out.print("Main: End of the program\n");
     }
 
 }

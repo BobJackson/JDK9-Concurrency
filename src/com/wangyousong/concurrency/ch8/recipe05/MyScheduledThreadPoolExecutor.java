@@ -27,8 +27,7 @@ public class MyScheduledThreadPoolExecutor extends ScheduledThreadPoolExecutor {
     @Override
     protected <V> RunnableScheduledFuture<V> decorateTask(Runnable runnable,
                                                           RunnableScheduledFuture<V> task) {
-        MyScheduledTask<V> myTask = new MyScheduledTask<V>(runnable, null, task, this);
-        return myTask;
+        return new MyScheduledTask<>(runnable, null, task, this);
     }
 
 

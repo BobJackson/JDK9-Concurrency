@@ -1,5 +1,6 @@
 package com.wangyousong.concurrency.ch8.recipe07;
 
+import java.util.Arrays;
 import java.util.concurrent.ForkJoinPool;
 
 /**
@@ -16,7 +17,7 @@ public class Main {
 		/*
 		 * Create an array of 10000 elements
 		 */
-		int array[] = new int[10000];
+		int[] array = new int[10000];
 
 		/*
 		 * ForkJoinPool to execute the task
@@ -38,10 +39,13 @@ public class Main {
 		 */
 		pool.shutdown();
 
+		// sum() = 10000
+		System.out.println("sum() = " + Arrays.stream(array).sum());
+
 		/*
 		 * Write a message in the console
 		 */
-		System.out.printf("Main: End of the program.\n");
+		System.out.print("Main: End of the program.\n");
 
 	}
 

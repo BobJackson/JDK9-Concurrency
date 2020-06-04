@@ -17,7 +17,7 @@ public class Main {
         /*
          * Create an executor with a PriorityBlockingQueue as the structure to store the tasks
          */
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(4, 4, 1, TimeUnit.SECONDS, new PriorityBlockingQueue<Runnable>());
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(4, 4, 1, TimeUnit.SECONDS, new PriorityBlockingQueue<>());
 
         /*
          * Send ten task to the executor
@@ -61,7 +61,7 @@ public class Main {
         /*
          * Write a message to the console indicating the end of the program
          */
-        System.out.printf("Main: End of the program.\n");
+        System.out.print("Main: End of the program.\n");
     }
 
 }

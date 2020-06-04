@@ -2,8 +2,8 @@ package com.wangyousong.concurrency.ch8.recipe12;
 
 public class PublisherTask implements Runnable {
 
-    private ConsumerData consumerData;
-    private News news;
+    private final ConsumerData consumerData;
+    private final News news;
 
     public PublisherTask(ConsumerData consumerData, News news) {
         this.consumerData = consumerData;

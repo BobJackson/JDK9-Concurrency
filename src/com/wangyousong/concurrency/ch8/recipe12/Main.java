@@ -17,7 +17,7 @@ public class Main {
         publisher.subscribe(consumer1);
         publisher.subscribe(consumer2);
 
-        System.out.printf("Main: Start\n");
+        System.out.print("Main: Start\n");
 
         News news = new News();
         news.setTitle("My first news");
@@ -38,7 +38,7 @@ public class Main {
         news.setDate(new Date());
         publisher.publish(news);
 
-        System.out.printf("Main: End\n");
+        System.out.print("Main: End\n");
 
     }
 
