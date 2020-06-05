@@ -12,6 +12,11 @@ public class MySubscription implements Subscription {
         canceled = true;
     }
 
+    /*
+    The subscriber must use
+    the request() method of the subscription to indicate that it's ready to process more
+    elements from the publisher.
+     */
     @Override
     public void request(long value) {
         requested += value;

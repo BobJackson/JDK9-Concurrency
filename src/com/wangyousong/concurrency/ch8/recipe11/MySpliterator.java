@@ -3,6 +3,13 @@ package com.wangyousong.concurrency.ch8.recipe11;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
+/**
+ * Spliterator -> This interface defines methods that can
+ * be used to process and partition a source of elements to be used, for example, the source of
+ * a Stream object. You will rarely need to use a Spliterator object directly. Only if you
+ * want a different behavior--that is, if you want to implement your own data structure and
+ * create Stream from it--use a Spliterator object
+ */
 public class MySpliterator implements Spliterator<Item> {
 
     private final Item[][] items;

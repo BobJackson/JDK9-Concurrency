@@ -1,5 +1,9 @@
 package com.wangyousong.concurrency.ch8.recipe12;
 
+/**
+ * This class will be used by the publisher
+ * to store the information of every subscriber
+ */
 public class ConsumerData {
 
     private Consumer consumer;
