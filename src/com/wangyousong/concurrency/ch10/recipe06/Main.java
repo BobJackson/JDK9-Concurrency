@@ -13,7 +13,7 @@ public class Main {
         /*
          * Create an array to store the threads
          */
-        Thread threads[] = new Thread[3];
+        Thread[] threads = new Thread[3];
 
         /*
          * Launch three tasks

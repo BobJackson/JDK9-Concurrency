@@ -20,13 +20,13 @@ public class OneSecondLongTask extends RecursiveAction {
      */
     @Override
     protected void compute() {
-        System.out.printf("Task: Starting.\n");
+        System.out.printf("Task: Starting.%n");
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.printf("Task: Finish.\n");
+        System.out.printf("Task: Finish.%n");
     }
 
 }

@@ -46,9 +46,7 @@ public class Main {
             System.out.printf("Main: System Task: Number of Results: %d\n", systemTask.get().size());
             System.out.printf("Main: App Task: Number of Results: %d\n", appsTask.get().size());
             System.out.printf("Main: Documents Task: Number of Results: %d\n", documentsTask.get().size());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 

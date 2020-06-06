@@ -22,7 +22,7 @@ public class MainSemaphore {
         /*
          * Create an array for ten threads
          */
-        Thread threads[] = new Thread[10];
+        Thread[] threads = new Thread[10];
 
         /*
          * Create and launch a thread every 200 milliseconds. After each creation,
@@ -53,13 +53,13 @@ public class MainSemaphore {
      * @param semaphore Semaphore to write its log information
      */
     private static void showLog(Semaphore semaphore) {
-        System.out.printf("********************\n");
-        System.out.printf("Main: Semaphore Log\n");
-        System.out.printf("Main: Semaphore: Avalaible Permits: %d\n", semaphore.availablePermits());
-        System.out.printf("Main: Semaphore: Queued Threads: %s\n", semaphore.hasQueuedThreads());
-        System.out.printf("Main: Semaphore: Queue Length: %d\n", semaphore.getQueueLength());
-        System.out.printf("Main: Semaphore: Fairness: %s\n", semaphore.isFair());
-        System.out.printf("********************\n");
+        System.out.printf("********************%n");
+        System.out.printf("Main: Semaphore Log%n");
+        System.out.printf("Main: Semaphore: Available Permits: %d%n", semaphore.availablePermits());
+        System.out.printf("Main: Semaphore: Queued Threads: %s%n", semaphore.hasQueuedThreads());
+        System.out.printf("Main: Semaphore: Queue Length: %d%n", semaphore.getQueueLength());
+        System.out.printf("Main: Semaphore: Fairness: %s%n", semaphore.isFair());
+        System.out.printf("********************%n");
     }
 
 }

@@ -38,7 +38,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.printf("Main: The program has finished.\n");
+        System.out.printf("Main: The program has finished.%n");
 
     }
 

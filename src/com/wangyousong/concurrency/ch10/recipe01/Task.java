@@ -10,7 +10,7 @@ import java.util.concurrent.FutureTask;
  */
 public class Task extends FutureTask<List<String>> {
 
-    private FileSearch fileSearch;
+    private final FileSearch fileSearch;
 
     /**
      * Constructor of the class
@@ -20,7 +20,11 @@ public class Task extends FutureTask<List<String>> {
      */
     public Task(Runnable runnable, List<String> result) {
         super(runnable, result);
-        this.fileSearch = (FileSearch) runnable;
+        if (runnable instanceof FileSearch fs) {
+            this.fileSearch = fs;
+        } else {
+            throw new ClassCastException("runnable Must be an instance of FileSearch or its subclass");
+        }
     }
 
     /**

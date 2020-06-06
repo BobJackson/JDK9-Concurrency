@@ -30,7 +30,6 @@ public class FileSearch implements Runnable {
      *
      * @param initPath Initial path for the search
      * @param end      Extension of the files we are searching for
-     * @param phaser   Phaser object to control the execution
      */
     public FileSearch(String initPath, String end) {
         this.initPath = initPath;
@@ -70,15 +69,15 @@ public class FileSearch implements Runnable {
     private void directoryProcess(File file) {
 
         // Get the content of the directory
-        File list[] = file.listFiles();
+        File[] list = file.listFiles();
         if (list != null) {
-            for (int i = 0; i < list.length; i++) {
-                if (list[i].isDirectory()) {
+            for (File value : list) {
+                if (value.isDirectory()) {
                     // If is a directory, process it
-                    directoryProcess(list[i]);
+                    directoryProcess(value);
                 } else {
                     // If is a file, process it
-                    fileProcess(list[i]);
+                    fileProcess(value);
                 }
             }
         }
@@ -91,7 +90,9 @@ public class FileSearch implements Runnable {
      */
     private void fileProcess(File file) {
         if (file.getName().endsWith(end)) {
-            results.add(file.getAbsolutePath());
+            String absolutePath = file.getAbsolutePath();
+//            System.out.println(absolutePath);
+            results.add(absolutePath);
         }
     }
 

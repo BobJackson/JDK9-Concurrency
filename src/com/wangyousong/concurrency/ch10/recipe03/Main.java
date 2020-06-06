@@ -21,12 +21,12 @@ public class Main {
         /*
          * An array to store the Thread objects that execute the producers
          */
-        Thread producerThreads[] = new Thread[THREADS];
+        Thread[] producerThreads = new Thread[THREADS];
 
         /*
          * An array to store the Thread objects that execute the consumers
          */
-        Thread consumerThreads[] = new Thread[THREADS];
+        Thread[] consumerThreads = new Thread[THREADS];
 
         /*
          * Launch 100 Consumer tasks
@@ -61,8 +61,8 @@ public class Main {
         /*
          * Write the size of the buffer in the Console
          */
-        System.out.printf("Main: Size of the buffer: %d\n", buffer.size());
-        System.out.printf("Main: End of the example\n");
+        System.out.printf("Main: Size of the buffer: %d%n", buffer.size());
+        System.out.printf("Main: End of the example%n");
     }
 
 }
