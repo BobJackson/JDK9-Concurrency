@@ -60,7 +60,7 @@ public class Main {
         /*
          * Write a message to indicate the end of the program
          */
-        System.out.printf("Main: End of the program.\n");
+        System.out.printf("Main: End of the program.%n");
 
     }
 
@@ -70,17 +70,17 @@ public class Main {
      * @param executor Executor this method is going to process
      */
     private static void showLog(ThreadPoolExecutor executor) {
-        System.out.printf("*********************");
-        System.out.printf("Main: Executor Log");
-        System.out.printf("Main: Executor: Core Pool Size: %d\n", executor.getCorePoolSize());
-        System.out.printf("Main: Executor: Pool Size: %d\n", executor.getPoolSize());
-        System.out.printf("Main: Executor: Active Count: %d\n", executor.getActiveCount());
-        System.out.printf("Main: Executor: Task Count: %d\n", executor.getTaskCount());
-        System.out.printf("Main: Executor: Completed Task Count: %d\n", executor.getCompletedTaskCount());
-        System.out.printf("Main: Executor: Shutdown: %s\n", executor.isShutdown());
-        System.out.printf("Main: Executor: Terminating: %s\n", executor.isTerminating());
-        System.out.printf("Main: Executor: Terminated: %s\n", executor.isTerminated());
-        System.out.printf("*********************\n");
+        System.out.printf("*********************%n");
+        System.out.printf("Main: Executor Log%n");
+        System.out.printf("Main: Executor: Core Pool Size: %d%n", executor.getCorePoolSize());
+        System.out.printf("Main: Executor: Pool Size: %d%n", executor.getPoolSize());
+        System.out.printf("Main: Executor: Active Count: %d%n", executor.getActiveCount());
+        System.out.printf("Main: Executor: Task Count: %d%n", executor.getTaskCount());
+        System.out.printf("Main: Executor: Completed Task Count: %d%n", executor.getCompletedTaskCount());
+        System.out.printf("Main: Executor: Shutdown: %s%n", executor.isShutdown());
+        System.out.printf("Main: Executor: Terminating: %s%n", executor.isTerminating());
+        System.out.printf("Main: Executor: Terminated: %s%n", executor.isTerminated());
+        System.out.printf("*********************%n");
     }
 
 }

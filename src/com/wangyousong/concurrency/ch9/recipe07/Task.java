@@ -11,7 +11,7 @@ public class Task implements Runnable {
     /**
      * Lock used in the task
      */
-    private ReentrantLock lock;
+    private final ReentrantLock lock;
 
     /**
      * Constructor of the class
@@ -36,10 +36,13 @@ public class Task implements Runnable {
              * while it is sleeping, the lock won't be unlocked and it will cause
              * that the threads that are waiting for this block will be blocked and
              * never will get the control of the Lock.
+             * This will probably cause a deadlock situation in the application
              */
-            lock.unlock();
+//            lock.unlock();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            lock.unlock();
         }
 
     }

@@ -20,9 +20,9 @@ public class Main {
         /*
          * Execute the test
          */
-        System.out.printf("Main: Starting the test\n");
+        System.out.printf("Main: Starting the test%n");
         TestFramework.runOnce(test);
-        System.out.printf("Main: The test has finished\n");
+        System.out.printf("Main: The test has finished%n");
 
     }
 

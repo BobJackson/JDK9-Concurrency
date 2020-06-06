@@ -27,7 +27,7 @@ public class Main {
         /*
          * Create and launch five Task objects
          */
-        Thread threads[] = new Thread[5];
+        Thread[] threads = new Thread[5];
         for (int i = 0; i < threads.length; i++) {
             logger.log(Level.INFO, "Launching thread: " + i);
             Task task = new Task();
@@ -44,10 +44,10 @@ public class Main {
         /*
          * Wait for the finalization of the threads
          */
-        for (int i = 0; i < threads.length; i++) {
+        for (Thread thread : threads) {
             try {
-                threads[i].join();
-                logger.log(Level.INFO, "Thread has finished its execution", threads[i]);
+                thread.join();
+                logger.log(Level.INFO, "Thread has finished its execution", thread);
             } catch (InterruptedException e) {
                 logger.log(Level.SEVERE, "Exception", e);
             }

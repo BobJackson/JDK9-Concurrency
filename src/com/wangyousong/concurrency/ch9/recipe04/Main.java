@@ -23,23 +23,23 @@ public class Main {
         /*
          * Create a new Array of integer numbers with 10000 elements
          */
-        int array[] = new int[10000];
+        int[] array = new int[10000];
 
         /*
          * Create a new task
          */
-        Task task1 = new Task(array, 0, array.length);
+        Task task = new Task(array, 0, array.length);
 
         /*
          * Execute the task in the Fork/Join pool
          */
-        pool.execute(task1);
+        pool.execute(task);
 
         /*
          * Wait for the finalization of the task writing information
          * about the pool every second
          */
-        while (!task1.isDone()) {
+        while (!task.isDone()) {
             showLog(pool);
             TimeUnit.SECONDS.sleep(1);
         }
@@ -58,7 +58,7 @@ public class Main {
          * End of the program
          */
         showLog(pool);
-        System.out.printf("Main: End of the program.\n");
+        System.out.printf("Main: End of the program.%n");
 
     }
 
@@ -66,18 +66,18 @@ public class Main {
      * This method writes information about a Fork/Join pool
      */
     private static void showLog(ForkJoinPool pool) {
-        System.out.printf("**********************\n");
-        System.out.printf("Main: Fork/Join Pool log\n");
-        System.out.printf("Main: Fork/Join Pool: Parallelism: %d\n", pool.getParallelism());
-        System.out.printf("Main: Fork/Join Pool: Pool Size: %d\n", pool.getPoolSize());
-        System.out.printf("Main: Fork/Join Pool: Active Thread Count: %d\n", pool.getActiveThreadCount());
-        System.out.printf("Main: Fork/Join Pool: Running Thread Count: %d\n", pool.getRunningThreadCount());
-        System.out.printf("Main: Fork/Join Pool: Queued Submission: %d\n", pool.getQueuedSubmissionCount());
-        System.out.printf("Main: Fork/Join Pool: Queued Tasks: %d\n", pool.getQueuedTaskCount());
-        System.out.printf("Main: Fork/Join Pool: Queued Submissions: %s\n", pool.hasQueuedSubmissions());
-        System.out.printf("Main: Fork/Join Pool: Steal Count: %d\n", pool.getStealCount());
-        System.out.printf("Main: Fork/Join Pool: Terminated : %s\n", pool.isTerminated());
-        System.out.printf("**********************\n");
+        System.out.printf("**********************%n");
+        System.out.printf("Main: Fork/Join Pool log%n");
+        System.out.printf("Main: Fork/Join Pool: Parallelism: %d%n", pool.getParallelism());
+        System.out.printf("Main: Fork/Join Pool: Pool Size: %d%n", pool.getPoolSize());
+        System.out.printf("Main: Fork/Join Pool: Active Thread Count: %d%n", pool.getActiveThreadCount());
+        System.out.printf("Main: Fork/Join Pool: Running Thread Count: %d%n", pool.getRunningThreadCount());
+        System.out.printf("Main: Fork/Join Pool: Queued Submission: %d%n", pool.getQueuedSubmissionCount());
+        System.out.printf("Main: Fork/Join Pool: Queued Tasks: %d%n", pool.getQueuedTaskCount());
+        System.out.printf("Main: Fork/Join Pool: Queued Submissions: %s%n", pool.hasQueuedSubmissions());
+        System.out.printf("Main: Fork/Join Pool: Steal Count: %d%n", pool.getStealCount());
+        System.out.printf("Main: Fork/Join Pool: Terminated : %s%n", pool.isTerminated());
+        System.out.printf("**********************%n");
     }
 
 }

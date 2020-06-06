@@ -24,7 +24,9 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             Task task = new Task(lock);
             Thread thread = new Thread(task);
-            thread.run();
+            // Calls to 'run()' should probably be replaced with 'start()'
+//            thread.run();
+            thread.start();
         }
 
     }

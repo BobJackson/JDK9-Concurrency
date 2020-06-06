@@ -23,7 +23,7 @@ public class Task extends RecursiveAction {
     /**
      * Array of elements you want to increment
      */
-    private final int array[];
+    private final int[] array;
 
     /**
      * Start position of the set of elements this task has to process
@@ -33,7 +33,7 @@ public class Task extends RecursiveAction {
     /**
      * End position of the set of elements this task has to process
      */
-    private int end;
+    private final int end;
 
     /**
      * Constructor of the class. Initializes its attributes
@@ -42,7 +42,7 @@ public class Task extends RecursiveAction {
      * @param start Start position of the set of elements this task has to process
      * @param end   End position of the set of elements this task has to process
      */
-    public Task(int array[], int start, int end) {
+    public Task(int[] array, int start, int end) {
         this.array = array;
         this.start = start;
         this.end = end;

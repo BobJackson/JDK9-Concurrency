@@ -21,7 +21,7 @@ public class Main {
         /*
          * Create an array for five threads
          */
-        Thread threads[] = new Thread[5];
+        Thread[] threads = new Thread[5];
 
         /*
          * Create and start five threads
@@ -39,22 +39,22 @@ public class Main {
             /*
              * Write info about the lock
              */
-            System.out.printf("Main: Logging the Lock\n");
-            System.out.printf("************************\n");
-            System.out.printf("Lock: Owner : %s\n", lock.getOwnerName());
-            System.out.printf("Lock: Queued Threads: %s\n", lock.hasQueuedThreads());
+            System.out.printf("Main: Logging the Lock%n");
+            System.out.printf("************************%n");
+            System.out.printf("Lock: Owner : %s%n", lock.getOwnerName());
+            System.out.printf("Lock: Queued Threads: %s%n", lock.hasQueuedThreads());
             if (lock.hasQueuedThreads()) {
-                System.out.printf("Lock: Queue Length: %d\n", lock.getQueueLength());
-                System.out.printf("Lock: Queued Threads: ");
+                System.out.printf("Lock: Queue Length: %d%n", lock.getQueueLength());
+                System.out.print("Lock: Queued Threads: ");
                 Collection<Thread> lockedThreads = lock.getThreads();
                 for (Thread lockedThread : lockedThreads) {
                     System.out.printf("%s ", lockedThread.getName());
                 }
-                System.out.printf("\n");
+                System.out.printf("%n");
             }
-            System.out.printf("Lock: Fairness: %s\n", lock.isFair());
-            System.out.printf("Lock: Locked: %s\n", lock.isLocked());
-            System.out.printf("************************\n");
+            System.out.printf("Lock: Fairness: %s%n", lock.isFair());
+            System.out.printf("Lock: Locked: %s%n", lock.isLocked());
+            System.out.printf("************************%n");
             /*
              * Sleep the thread for one second
              */

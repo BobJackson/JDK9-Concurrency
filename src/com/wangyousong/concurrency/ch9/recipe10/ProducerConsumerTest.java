@@ -9,6 +9,17 @@ import java.util.concurrent.LinkedTransferQueue;
  * two consumers and a producer. First, arrives the first consumer then
  * arrives the second consumer and finally the producer puts two Strings
  * in the buffer.
+ * <p>
+ * To control the order of execution of threads, you used the waitForTick() method. This
+ * method receives an integer value as a parameter and puts the thread that is executing the
+ * method to sleep until all the threads that are running in the test are blocked. When they are
+ * blocked, the MultithreadedTC library resumes the threads that are blocked by a call to the
+ * waitForTick() method.
+ * <p>
+ * <p>
+ * If the MultithreadedTC library detects that all the threads of the test are blocked except in
+ * the waitForTick() method, the test is declared to be in a deadlock state and a
+ * java.lang.IllegalStateException exception is thrown
  */
 public class ProducerConsumerTest extends MultithreadedTestCase {
 
@@ -23,8 +34,8 @@ public class ProducerConsumerTest extends MultithreadedTestCase {
     @Override
     public void initialize() {
         super.initialize();
-        queue = new LinkedTransferQueue<String>();
-        System.out.printf("Test: The test has been initialized\n");
+        queue = new LinkedTransferQueue<>();
+        System.out.printf("Test: The test has been initialized%n");
     }
 
     /**
@@ -34,7 +45,7 @@ public class ProducerConsumerTest extends MultithreadedTestCase {
      */
     public void thread1() throws InterruptedException {
         String ret = queue.take();
-        System.out.printf("Thread 1: %s\n", ret);
+        System.out.printf("Thread 1: %s%n", ret);
     }
 
     /**
@@ -46,7 +57,7 @@ public class ProducerConsumerTest extends MultithreadedTestCase {
     public void thread2() throws InterruptedException {
         waitForTick(1);
         String ret = queue.take();
-        System.out.printf("Thread 2: %s\n", ret);
+        System.out.printf("Thread 2: %s%n", ret);
     }
 
     /**
@@ -60,7 +71,8 @@ public class ProducerConsumerTest extends MultithreadedTestCase {
         waitForTick(2);
         queue.put("Event 1");
         queue.put("Event 2");
-        System.out.printf("Thread 3: Inserted two elements\n");
+//        queue.put("Event 3");
+        System.out.printf("Thread 3: Inserted two elements%n");
     }
 
     /**
@@ -70,8 +82,8 @@ public class ProducerConsumerTest extends MultithreadedTestCase {
     @Override
     public void finish() {
         super.finish();
-        System.out.printf("Test: End\n");
-        assertEquals(true, queue.size() == 0);
-        System.out.printf("Test: Result: The queue is empty\n");
+        System.out.printf("Test: End%n");
+        assertEquals(0, queue.size()); // if queue.put("Event 3"); junit.framework.AssertionFailedError: expected:<0> but was:<1>
+        System.out.printf("Test: Result: The queue is empty%n");
     }
 }

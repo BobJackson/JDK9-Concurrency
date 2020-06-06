@@ -27,10 +27,10 @@ public class MyFormatter extends Formatter {
         /*
          * Add the parts of the message with the desired format.
          */
-        sb.append("[" + record.getLevel() + "] - ");
-        sb.append(new Date(record.getMillis()) + " : ");
-        sb.append(record.getSourceClassName() + "." + record.getSourceMethodName() + " : ");
-        sb.append(record.getMessage() + "\n");
+        sb.append("[").append(record.getLevel()).append("] - ");
+        sb.append(new Date(record.getMillis())).append(" : ");
+        sb.append(record.getSourceClassName()).append(".").append(record.getSourceMethodName()).append(" : ");
+        sb.append(record.getMessage()).append("\n");
 
         /*
          * Convert the string buffer to string and return it

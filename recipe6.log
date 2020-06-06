@@ -1,0 +1,28 @@
+[FINER] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main() : ENTRY
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Launching thread: 0
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread created: Thread-0
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Launching thread: 1
+[FINER] - Sat Jun 06 18:22:34 CST 2020 : Thread-0.run() : ENTRY
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread created: Thread-1
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Launching thread: 2
+[FINER] - Sat Jun 06 18:22:34 CST 2020 : Thread-1.run() : ENTRY
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread created: Thread-2
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Launching thread: 3
+[FINER] - Sat Jun 06 18:22:34 CST 2020 : Thread-2.run() : ENTRY
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread created: Thread-3
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Launching thread: 4
+[FINER] - Sat Jun 06 18:22:34 CST 2020 : Thread-3.run() : ENTRY
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread created: Thread-4
+[INFO] - Sat Jun 06 18:22:34 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Ten Threads created. Waiting for its finalization
+[FINER] - Sat Jun 06 18:22:34 CST 2020 : Thread-4.run() : ENTRY
+[FINER] - Sat Jun 06 18:22:36 CST 2020 : Thread-1.run() : RETURN
+[FINER] - Sat Jun 06 18:22:36 CST 2020 : Thread-0.run() : RETURN
+[INFO] - Sat Jun 06 18:22:36 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread has finished its execution
+[INFO] - Sat Jun 06 18:22:36 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread has finished its execution
+[FINER] - Sat Jun 06 18:22:36 CST 2020 : Thread-2.run() : RETURN
+[INFO] - Sat Jun 06 18:22:36 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread has finished its execution
+[FINER] - Sat Jun 06 18:22:36 CST 2020 : Thread-3.run() : RETURN
+[INFO] - Sat Jun 06 18:22:36 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread has finished its execution
+[FINER] - Sat Jun 06 18:22:36 CST 2020 : Thread-4.run() : RETURN
+[INFO] - Sat Jun 06 18:22:36 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main : Thread has finished its execution
+[FINER] - Sat Jun 06 18:22:36 CST 2020 : com.wangyousong.concurrency.ch9.recipe06.Main.main() : RETURN

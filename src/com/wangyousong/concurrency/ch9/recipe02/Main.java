@@ -31,13 +31,13 @@ public class Main {
          * Write information about the Phaser
          */
         for (int i = 0; i < 10; i++) {
-            System.out.printf("********************\n");
-            System.out.printf("Main: Phaser Log\n");
-            System.out.printf("Main: Phaser: Phase: %d\n", phaser.getPhase());
-            System.out.printf("Main: Phaser: Registered Parties: %d\n", phaser.getRegisteredParties());
-            System.out.printf("Main: Phaser: Arrived Parties: %d\n", phaser.getArrivedParties());
-            System.out.printf("Main: Phaser: Unarrived Parties: %d\n", phaser.getUnarrivedParties());
-            System.out.printf("********************\n");
+            System.out.printf("********************%n");
+            System.out.printf("Main: Phaser Log%n");
+            System.out.printf("Main: Phaser: Phase: %d%n", phaser.getPhase());
+            System.out.printf("Main: Phaser: Registered Parties: %d%n", phaser.getRegisteredParties());
+            System.out.printf("Main: Phaser: Arrived Parties: %d%n", phaser.getArrivedParties());
+            System.out.printf("Main: Phaser: Unarrived Parties: %d%n", phaser.getUnarrivedParties());
+            System.out.printf("********************%n");
 
             TimeUnit.SECONDS.sleep(1);
         }
