@@ -6,9 +6,9 @@ public class PersonGenerator {
     public static List<Person> generatePersonList(int size) {
         List<Person> ret = new ArrayList<>();
 
-        String firstNames[] = {"Mary", "Patricia", "Linda", "Barbara", "Elizabeth", "James", "John", "Robert",
+        String[] firstNames = {"Mary", "Patricia", "Linda", "Barbara", "Elizabeth", "James", "John", "Robert",
                 "Michael", "William"};
-        String lastNames[] = {"Smith", "Jones", "Taylor", "Williams", "Brown", "Davies", "Evans", "Wilson", "Thomas",
+        String[] lastNames = {"Smith", "Jones", "Taylor", "Williams", "Brown", "Davies", "Evans", "Wilson", "Thomas",
                 "Roberts"};
 
         Random randomGenerator = new Random();

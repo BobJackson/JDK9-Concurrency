@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class TaskLock implements Runnable {
 
-    private Lock lock;
+    private final Lock lock;
     private int number;
 
     public TaskLock() {
@@ -19,7 +19,7 @@ public class TaskLock implements Runnable {
             number = i;
             lock.unlock();
         }
-
+//        System.out.println("TaskLock : " + Thread.currentThread().getName() + " : " + number);
     }
 
 

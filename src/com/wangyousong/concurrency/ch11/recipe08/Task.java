@@ -4,9 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Task implements Runnable {
 
-    private final int array[];
+    private final int[] array;
 
-    public Task(int array[]) {
+    public Task(int[] array) {
         this.array = array;
     }
 
@@ -16,6 +16,7 @@ public class Task implements Runnable {
             array[i]++;
             try {
                 TimeUnit.MILLISECONDS.sleep(1);
+//                TimeUnit.NANOSECONDS.sleep(100_000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

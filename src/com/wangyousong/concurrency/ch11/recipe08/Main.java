@@ -12,7 +12,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        int array[] = new int[100000];
+        int[] array = new int[100000];
         Task task = new Task(array);
         ExecutorService executor = Executors.newCachedThreadPool();
 
@@ -26,6 +26,8 @@ public class Main {
             e.printStackTrace();
         }
         end = new Date();
+        // Main: Executor: 184401 (sleep 1 MILLISECONDS)
+        // Main: Executor: 186211 (sleep 100_000 NANOSECONDS)
         System.out.printf("Main: Executor: %d\n", (end.getTime() - start.getTime()));
 
         TaskFJ taskFJ = new TaskFJ(array, 1, 100000);
@@ -39,6 +41,8 @@ public class Main {
             e.printStackTrace();
         }
         end = new Date();
+        // Core: Fork/Join: 24271   (sleep 1 MILLISECONDS)
+        // Main: Fork/Join: 29867   (sleep 100_000 NANOSECONDS)
         System.out.printf("Core: Fork/Join: %d\n", (end.getTime() - start.getTime()));
 
     }

@@ -2,10 +2,17 @@ package com.wangyousong.concurrency.ch11.recipe02;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
-
+/*
+(1) If you have to get control of more than one lock in different operations,
+try to lock them in the same order in all methods.
+(2) Then, release them in inverse order and encapsulate the locks and their
+unlocks in a single class. This is so that you don't have
+synchronization-related code distributed throughout the code.
+ */
 public class BadLocks {
 
-    private Lock lock1, lock2;
+    private final Lock lock1;
+    private final Lock lock2;
 
     public BadLocks(Lock lock1, Lock lock2) {
         this.lock1 = lock1;

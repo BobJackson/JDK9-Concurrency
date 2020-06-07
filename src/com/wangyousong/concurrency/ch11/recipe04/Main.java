@@ -13,7 +13,7 @@ public class Main {
         Lock lock = new ReentrantLock();
         Task1 task1 = new Task1(lock);
         Task2 task2 = new Task2(lock);
-        Thread threads[] = new Thread[10];
+        Thread[] threads = new Thread[10];
 
         Date begin, end;
 
@@ -23,14 +23,15 @@ public class Main {
             threads[i].start();
         }
 
-        for (int i = 0; i < threads.length; i++) {
+        for (Thread thread : threads) {
             try {
-                threads[i].join();
+                thread.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         end = new Date();
+        // Main: First Approach: 30028
         System.out.printf("Main: First Approach: %d\n", (end.getTime() - begin.getTime()));
 
         begin = new Date();
@@ -39,14 +40,15 @@ public class Main {
             threads[i].start();
         }
 
-        for (int i = 0; i < threads.length; i++) {
+        for (Thread thread : threads) {
             try {
-                threads[i].join();
+                thread.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
         end = new Date();
+        // Main: Second Approach: 10019
         System.out.printf("Main: Second Approach: %d\n", (end.getTime() - begin.getTime()));
 
 

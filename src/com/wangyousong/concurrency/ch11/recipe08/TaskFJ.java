@@ -5,10 +5,10 @@ import java.util.concurrent.TimeUnit;
 
 public class TaskFJ extends RecursiveAction {
 
-    private final int array[];
+    private final int[] array;
     private final int start, end;
 
-    public TaskFJ(int array[], int start, int end) {
+    public TaskFJ(int[] array, int start, int end) {
         this.array = array;
         this.start = start;
         this.end = end;
@@ -29,6 +29,7 @@ public class TaskFJ extends RecursiveAction {
                 array[i]++;
                 try {
                     TimeUnit.MILLISECONDS.sleep(1);
+//                    TimeUnit.NANOSECONDS.sleep(100_000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -11,7 +11,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        Thread threads[] = new Thread[1000];
+        Thread[] threads = new Thread[1000];
         Date start, end;
 
         start = new Date();
@@ -21,9 +21,9 @@ public class Main {
             threads[i].start();
         }
 
-        for (int i = 0; i < threads.length; i++) {
+        for (Thread thread : threads) {
             try {
-                threads[i].join();
+                thread.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

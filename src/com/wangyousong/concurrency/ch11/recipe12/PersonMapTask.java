@@ -12,8 +12,8 @@ public class PersonMapTask extends RecursiveAction {
      */
     private static final long serialVersionUID = 6687678520745563790L;
 
-    private List<Person> persons;
-    private ConcurrentHashMap<String, ConcurrentLinkedDeque<Person>> personMap;
+    private final List<Person> persons;
+    private final ConcurrentHashMap<String, ConcurrentLinkedDeque<Person>> personMap;
 
     public PersonMapTask(List<Person> persons, ConcurrentHashMap<String, ConcurrentLinkedDeque<Person>> personMap) {
         this.persons = persons;
@@ -26,9 +26,7 @@ public class PersonMapTask extends RecursiveAction {
         if (persons.size() < 1000) {
 
             for (Person person : persons) {
-                ConcurrentLinkedDeque<Person> personList = personMap.computeIfAbsent(person.getFirstName(), name -> {
-                    return new ConcurrentLinkedDeque<>();
-                });
+                ConcurrentLinkedDeque<Person> personList = personMap.computeIfAbsent(person.getFirstName(), name -> new ConcurrentLinkedDeque<>());
                 personList.add(person);
             }
             return;
