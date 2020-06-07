@@ -24,6 +24,7 @@ public class Main {
         AlwaysThrowsExceptionWorkerThreadFactory factory = new AlwaysThrowsExceptionWorkerThreadFactory();
         // Creates a new ForkJoinPool
         ForkJoinPool pool = new ForkJoinPool(2, factory, handler, false);
+//        ForkJoinPool pool = new ForkJoinPool(2, factory, null, false); //  java.lang.RuntimeException: Exception from worker thread
 
         // Execute the task in the pool
         pool.execute(task);

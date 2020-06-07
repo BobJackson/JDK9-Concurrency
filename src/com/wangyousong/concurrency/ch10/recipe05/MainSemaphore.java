@@ -16,6 +16,14 @@ public class MainSemaphore {
 
         /*
          * Create a semaphore
+         * A semaphore is a counter that protects the access to one or more shared resources.
+         *
+         * When a thread wants to use shared resources, it must acquire a semaphore. If the internal
+         * counter of the semaphore is greater than 0, the semaphore decrements the counter and
+         * allows the access to the shared resource. If the counter of the semaphore is 0, the semaphore
+         * blocks the thread until the counter is greater than 0. When the thread has finished using the
+         * shared resource, it must release the semaphore. That operation increases the internal
+         * counter of the semaphore.
          */
         Semaphore semaphore = new Semaphore(3);
 
