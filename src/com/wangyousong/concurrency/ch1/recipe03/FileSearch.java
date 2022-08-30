@@ -63,15 +63,15 @@ public class FileSearch implements Runnable {
 	private void directoryProcess(File file) throws InterruptedException {
 
 		// Get the content of the directory
-		File list[] = file.listFiles();
+		File[] list = file.listFiles();
 		if (list != null) {
-			for (int i = 0; i < list.length; i++) {
-				if (list[i].isDirectory()) {
+			for (File value : list) {
+				if (value.isDirectory()) {
 					// If is a directory, process it
-					directoryProcess(list[i]);
+					directoryProcess(value);
 				} else {
 					// If is a file, process it
-					fileProcess(list[i]);
+					fileProcess(value);
 				}
 			}
 		}

@@ -48,7 +48,7 @@ public class CleanerTask extends Thread {
 	private void clean(Date date) {
 		long difference;
 		boolean delete;
-		if (deque.size() == 0) {
+		if (deque.isEmpty()) {
 			return;
 		}
 

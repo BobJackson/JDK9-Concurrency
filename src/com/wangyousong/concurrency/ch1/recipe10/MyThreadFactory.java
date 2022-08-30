@@ -27,7 +27,7 @@ public class MyThreadFactory implements ThreadFactory {
 	public MyThreadFactory(String name) {
 		counter = 0;
 		this.name = name;
-		stats = new ArrayList<String>();
+		stats = new ArrayList<>();
 	}
 
 	/**

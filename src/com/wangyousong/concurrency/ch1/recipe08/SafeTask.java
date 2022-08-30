@@ -17,11 +17,7 @@ public class SafeTask implements Runnable {
 	 * as well. They retain their value while the thread is alive. This can be problematic in
 	 * situations where threads are reused
 	 */
-	private static ThreadLocal<Date> startDate = new ThreadLocal<Date>() {
-		protected Date initialValue() {
-			return new Date();
-		}
-	};
+	private static final ThreadLocal<Date> startDate = ThreadLocal.withInitial(Date::new);
 
 	/**
 	 * Main method of the class
