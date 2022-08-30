@@ -11,7 +11,7 @@ public class Main {
      * Main method of the class. Run ten jobs in parallel that
      * send documents to the print queue at the same time.
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         System.out.print("Running example with fair-mode = false\n");
         testPrintQueue(false);

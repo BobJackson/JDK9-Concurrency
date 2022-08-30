@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SeedGenerator implements Runnable {
 
-	private CompletableFuture<Integer> resultCommunicator;
+	private final CompletableFuture<Integer> resultCommunicator;
 
 	public SeedGenerator(CompletableFuture<Integer> completable) {
 		this.resultCommunicator = completable;

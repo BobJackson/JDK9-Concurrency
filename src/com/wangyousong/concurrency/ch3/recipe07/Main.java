@@ -35,11 +35,10 @@ public class Main {
 
 		System.out.print("Main: Launching step 2\n");
 		CompletableFuture<Long> step2Future = startFuture
-				.thenApplyAsync(list -> list.stream().max(Long::compare).get());
+				.thenApplyAsync(list -> list.stream().max(Long::compare).orElse(0L));
 
-		CompletableFuture<Void> write2Future = step2Future.thenAccept(selected -> {
-			System.out.printf("%s: Step 2: Result - %d\n", Thread.currentThread().getName(), selected);
-		});
+		CompletableFuture<Void> write2Future = step2Future.thenAccept(selected ->
+				System.out.printf("%s: Step 2: Result - %d\n", Thread.currentThread().getName(), selected));
 
 		System.out.print("Main: Launching step 3\n");
 		NumberSelector numberSelector = new NumberSelector();
